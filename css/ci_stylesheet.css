@@ -940,8 +940,12 @@ hr {
 
 /* phones */
 @media screen and (max-width: 450px) {
-    .site-logo, .decorative-image, .main-stats-intro, .top-nav-link:first-child {
+    .site-logo, .decorative-image, .main-stats-intro, .top-nav-link:first-child, .search-field {
         display: none;
+    }
+
+    .top-bar {
+        justify-content: center;
     }
 
     .main-navigation {
@@ -990,7 +994,7 @@ hr {
         font-size: 20px;
     }
 
-    .left-text-align > section {
+    .left-text-align > section, .site-title, .top-bar-tl {
         margin: 0;
     }
 
