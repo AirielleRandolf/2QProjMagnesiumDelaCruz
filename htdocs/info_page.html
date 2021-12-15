@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<!-- 
+
+    TODO: make the site responsive for phones (300px wide)
+
+    ! IMPORTANT 
+    * ask ma'am if we need audio for the autoplaying video, because Chrome does not allow autoplay when the video is unmuted.
+
+ -->
+
+<html lang="en">
+
+    <head>
+        <title>Corona Info - Information and statistics about COVID-19.</title>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Airielle Randolf D. Dela Cruz">
+        <meta name="keywords" content="CS3, COVID-19, Coronavirus, CoronaInfo, virus, pandemic">
+        <meta name="description" content="Corona Info provides latest information regarding the COVID-19 virus.">
+        <meta name="revised" content="06-11-2021">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/ci_stylesheet.css">
+
+        <!-- fontspaces -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Varela&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="../images/logo.png">
+
+        <!-- info page-specific css -->
+        <style>
+            main {
+                margin: 70px;
+                padding: 20px;
+                margin-top: -30px;
+                padding-top: 30px;
+                background-color: white;
+                border-radius: 30px;
+            }
+
+            main a:hover {
+                text-decoration: none;
+            }
+
+            p:not(footer p):not(.references p) {
+                font-family: Calibri, sans-serif;
+                font-size: 18px;
+            }
+            
+            @media screen and (max-width: 700px) {
+                main {
+                    margin: 0;
+                    padding: 35px;
+                }
+
+                #info-page-hero {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 
+            This is the container for the top of the screen, 
+            containing the logo, search bar, and navigation links.
+         -->
+        <header class="top">
+            <!-- This is the container for the logo and searchbar. -->
+            <div class="top-bar">
+                <div class="top-bar-tl">
+                    <img src="../images/logo.png" class="site-logo" alt="">
+                    <div class="site-title">
+                        <a href="../index.html">CoronaInfo</a>
+                    </div>
+                </div>
+
+                <!-- This is the searchbar. -->
+                <div class="search-field">
+                    <form>
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- These are the navigation links at the top of the screen. -->
+            <nav class="top-navigation">
+                <a class="top-nav-link" href="../index.html">HOME</a>
+                <a class="top-nav-link" id="current-page" href="info_page.html">INFO</a>
+                <a class="top-nav-link" href="statistics_page.html">STATISTICS</a>
+                <a class="top-nav-link" href="variants_page.html">VARIANTS</a>
+                <a class="top-nav-link" href="myths_page.html">MYTHS</a>
+                <a class="top-nav-link" href="effects_page.html">EFFECTS</a>
+            </nav>
+        </header>
+
+        <!-- This is the hero image of the info page -->
+        <div class="hero-image" id="info-page-hero"></div>
+
+        <!-- 
+            This is the main content of the info page
+         -->
+
+        <main>
+            <!-- 
+                This is the header part of the info page
+             -->
+            <header class="info-page-header">
+                <h1 class="main-heading">COVID-19 Info</h1>
+                <p>PUBLISHED: October 29, 2021</p>
+                <p>LAST UPDATED: October 29, 2021</p>
+            </header>
+
+            <figure id="info-video-wrapper">
+                <figcaption><b>Figure 1.</b></figcaption>
+                <figcaption><i>Coronavirus disease (COVID-19)</i></figcaption>
+
+                <video autoplay controls muted loop id="info-video">
+                    <source src="../mmfiles/COVID-19 Informational Video.mp4" type="video/mp4">
+
+                    This video could not load. Try checking your network connection or refreshing the browser.
+                </video>
+
+                <figcaption>Note. <i>This is a YouTube video uploaded by the World Health Organization on June 15, 2020,  summarizing COVID-19 information.</i></figcaption>
+            </figure>
+
+
+            <!-- 
+                COVID-19 collapsible description
+             -->
+            <button type="button" class="info-collapsible" id="first-collapsible">
+                <span class="long-coll-text">What is COVID-19?</span>
+                <span class="short-coll-text">COVID-19 Definition</span>
+            </button>
+            <section class="info content">
+                <img src="../images/decor-covid-1.png" class="rfloat info-image" id="circle-definition-image" alt="">
+
+                <article class="content-divisions covid-definition">
+                    <h2 class="info-page-subheader1">What is COVID-19?</h2>
+                    <p><b>Coronaviruses</b> are a group of RNA viruses that cause diseases in animals and humans. They can
+                        cause mild respiratory infections, but these viruses can also lead to serious illnesses like
+                        pneumonia. There are many of them, but one such coronavirus, the "severe acute respiratory syndrome
+                        coronavirus 2" (SARS-CoV-2) is the one that you all might be familiar with. That's because
+                        SARS-CoV-2 is the coronavirus that causes COVID-19 or Coronavirus Disease 2019.<sup><a
+                                href="#ref1">[1]</a></sup></p>
+
+                    <p>The SARS-CoV-2 virus is a part of the betacoronavirus (beta-CoV) genus and was first reported in
+                        December 2019 from Wuhan, China.<sup><a href="#ref2">[2]</a></sup> Ever since, COVID-19 has spread
+                        farther and farther, to the point where the World Health Organization even declared it as a "public
+                        health emergency of international concern" (PHEIC). PHEIC is defined by the IHR Emergency Committee
+                        as a "an extraordinary event which is determined to constitute a public health risk to other States
+                        through the international spread of disease and to potentially require a coordinated international
+                        response."<sup><a href="#ref3">[3]</a></sup> As of October 23, 2021, there are approximately 242.99
+                        million total recorded cases worldwide. The number of new cases peaked at April 28, 2021, having
+                        905,955 recorded cases that day.<sup><a href="#ref4">[4]</a></sup></p>
+                </article>
+
+                <aside>
+                    <h3 class="addi-heading addi-nav-header">More latest statistics:</h3>
+                    <a href="statistics_page.html" class="addi-nav">COVID-19 Statistics</a>
+                </aside>
+            </section>
+
+            <!-- 
+                COVID-19 collapsible symptoms list
+             -->
+            <button type="button" class="info-collapsible">
+                <span class="long-coll-text">What are the symptoms of COVID-19?</span>
+                <span class="short-coll-text">COVID-19 Symptoms</span>
+            </button>
+            <section class="info content">
+                <img src="https://health.wyo.gov/wp-content/uploads/2017/05/man-coughing-on-hand-300x191.jpg"
+                    class="rfloat info-image" alt="">
+
+                <article class="content-divisions covid-symptoms">
+                    <h2 class="info-page-subheader1">What are the symptoms of COVID-19?</h2>
+                    <p>The Coronavirus Disease has many symptoms, which are<sup><a href="#ref5">[5]</a></sup>:</p>
+                    <ul>
+                        <li>fever</li>
+                        <li>cough</li>
+                        <li>tiredness</li>
+                        <li>loss of taste and smell</li>
+                        <li>difficulty breathing</li>
+                        <li>loss of speech or mobility</li>
+                        <li>chest pain</li>
+                    </ul>
+                    <p>Some less common symptoms are:</p>
+                    <ul>
+                        <li>sore throat</li>
+                        <li>headache</li>
+                        <li>aches and pains</li>
+                        <li>diarrhoea</li>
+                        <li>a rash on skin, or discolouration of fingers and toes</li>
+                        <li>red eyes</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- 
+                COVID-19 collapsible variants list
+             -->
+            <button type="button" class="info-collapsible">
+                <span class="long-coll-text">What are the different variants of COVID-19?</span>
+                <span class="short-coll-text">COVID-19 Variants</span>
+            </button>
+            <section class="info content">
+                <article class="content-covid-variants">
+                    <h2 class="info-page-subheader1">What are the different variants of COVID-19?</h2>
+                    <p>The Coronavirus Disease also has many different variants. Each of these variants change something
+                        about the virus, like its lifespan or transmission rate. As of October 2021, there are four
+                        variants of concern which are<sup><a href="#ref6">[6]</a></sup>:</p>
+
+                    <!-- 
+                        This is the table for variants of concern
+                     -->
+                    <div class="variant-table-wrapper">
+                        <table class="variant-table">
+                            <caption><i><b>Variants of Concern (WHO, 2021)</b></i></caption>
+
+                            <tr>
+                                <th>Variant Name</th>
+                                <th>Pango Lineage / Alternate Name</th>
+                                <th>Earliest Documented Sample</th>
+                                <th>Date of Designation</th>
+                            </tr>
+
+                            <tr>
+                                <td>Alpha</td>
+                                <td>B.1.1.7<sup>#</sup></td>
+                                <td>United Kingdom, September 2020</td>
+                                <td>December 18, 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Beta</td>
+                                <td>B.1.351</td>
+                                <td>South Africa, May 2020</td>
+                                <td>December 18, 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Gamma</td>
+                                <td>P.1</td>
+                                <td>Brazil, November 2020</td>
+                                <td>January 11, 2021</td>
+                            </tr>
+
+                            <tr>
+                                <td>Delta</td>
+                                <td>B.1.617.2<sup>§</sup></td>
+                                <td>India, October 2020</td>
+                                <td>May 11, 2021 (VOC)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <p>There are also some variants of interest, which are genetic changes that are predicted or known to
+                        affect the virus in a significant way.</p>
+
+                    <!-- 
+                        This is table for the variants of interest
+                     -->
+                    <div class="variant-table-wrapper">
+                        <table class="variant-table">
+                            <caption><i><b>Variants of Interest (WHO, 2021)</b></i></caption>
+
+                            <tr>
+                                <th>Variant Name</th>
+                                <th>Pango Lineage / Alternate Name</th>
+                                <th>Earliest Documented Sample</th>
+                                <th>Date of Designation</th>
+                            </tr>
+
+                            <tr>
+                                <td>Lambda</td>
+                                <td>C.37</td>
+                                <td>Peru, December 2020</td>
+                                <td>June 14, 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mu</td>
+                                <td>B.1.621</td>
+                                <td>Colombia, January 2021</td>
+                                <td>August 30, 2020</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <aside>
+                        <h3 class="addi-heading addi-nav-header">More about Variants:</h3>
+                        <a href="variants_page.html" class="addi-nav">COVID-19 Variants</a>
+                    </aside>
+                </article>
+            </section>
+
+            <!-- 
+                COVID-19 collapsible prevention measures
+             -->
+            <button type="button" class="info-collapsible">
+                <span class="long-coll-text">How do you prevent COVID-19?</span>
+                <span class="short-coll-text">COVID-19 Prevention</span>
+            </button>
+            <section class="info content">
+                <img src="https://enovexrx.com/wp-content/uploads/2020/12/COVID-19-Prevention-Kit.png"
+                    class="rfloat info-image" alt="">
+
+                <article class="content-covid-prevention">
+                    <h2 class="info-page-subheader1">How do you prevent COVID-19?</h2>
+                    <p>
+                        There are many ways you can prevent getting infected by COVID-19 and help control its spread in your
+                        community. Some of the notable ones are<sup><a href="#ref7">[7]</a></sup>:
+                    </p>
+
+                    <ul>
+                        <li><strong>Follow local guidance</strong>. Listen to the advice of local, national, and regional
+                            authorities.</li>
+                        <li><strong>Keep your distance.</strong> Stay at least one meter away from everyone, even to those
+                            who appear healthy.</li>
+                        <li><strong>Wear a mask.</strong> Clean your hands before and after wearing a mask.</li>
+                        <li><strong>Avoid crowded places.</strong> Avoid poorly ventilated areas, indoor places, and
+                            prolonged contact with others.</li>
+                        <li><strong>Avoid touching surfaces,</strong> especially in public or health buildings.</li>
+                        <li><strong>Frequently wash your hands.</strong> Clean them with water and soap.</li>
+                        <li><strong>Cover your coughs and sneezes.</strong> Throw the tissues into a bin right away.</li>
+                        <li><strong>Get vaccinated.</strong> Follow recommendations about vaccination.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- 
+                COVID-19 collapsible effects list
+             -->
+            <button type="button" class="info-collapsible">
+                <span class="long-coll-text">How has COVID-19 affected us?</span>
+                <span class="short-coll-text">COVID-19 Effects</span>
+            </button>
+            <section class="info content">
+                <img src="https://richmondvale.org/images/easyblog_images/115/sb-game-hacker.jpg" class="rfloat info-image" alt="">
+
+                <article class="content-covid-effects">
+                    <h2 class="info-page-subheader1">How has COVID-19 affected us?</h2>
+                    <p>The COVID-19 pandemic has been a huge challenge for everybody. The disease has taken away people's
+                        lives, quite literally. It has been a massive hardship for many, and it is unclear when it will end,
+                        too.</p>
+
+                    <aside>
+                        <h3 class="addi-heading addi-nav-header">More about Effects:</h3>
+                        <a href="effects_page.html" class="addi-nav">The Effects of COVID-19 on Us</a>
+                    </aside>
+                </article>
+            </section>
+
+            <!-- 
+                See-also part of the info page
+             -->
+            <aside class="info see-also">
+                <img src="https://st2.depositphotos.com/3837271/9109/i/950/depositphotos_91090680-stock-photo-wooden-blocks-with-the-text.jpg"
+                    class="rfloat info-image" alt="">
+
+                <div class="content-covid-see-also">
+                    <h2 class="info-page-subheader2">See Also:</h2>
+
+                    <div>
+                        <h3 class="addi-heading addi-nav-header">Common COVID-19 Myths:</h3>
+                        <a href="myths_page.html" class="addi-nav">Common COVID-19 Myths</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 
+                References part of the info page
+             -->
+            <section class="info references">
+                <section class="content-references">
+                    <h2 class="info-page-subheader2" style="font-weight: bold;">Research references:</h2>
+                    <p id="ref1" class="padded-citation">[1] National Institute of Allergy and Infectious Diseases. (2021, August 18).
+                        <i>Coronaviruses.</i> <a href="https://www.niaid.nih.gov/diseases-conditions/coronaviruses"
+                            target="_blank">https://www.niaid.nih.gov/diseases-conditions/coronaviruses</a></p>
+
+                    <p id="ref2" class="padded-citation">[2] World Health Organization. (2020, March 26). <i>Origin of SARS-CoV-2.</i> <a
+                            href="https://apps.who.int/iris/bitstream/handle/10665/332197/WHO-2019-nCoV-FAQ-Virus_origin-2020.1-eng.pdf"
+                            target="_blank">https://apps.who.int/iris/bitstream/handle/10665/332197/WHO-2019-nCoV-FAQ-Virus_origin-2020.1-eng.pdf</a>
+                    </p>
+
+                    <p id="ref3" class="padded-citation">[3] WHO Team. (2019, December 19). <i>Emergencies: International health regulations and
+                            emergency committees.</i> Internet Archive: Wayback Machine. <a
+                            href="https://web.archive.org/web/20210815072835/https://www.who.int/news-room/q-a-detail/emergencies-international-health-regulations-and-emergency-committees"
+                            target="_blank">https://web.archive.org/web/20210815072835/https://www.who.int/news-room/q-a-detail/emergencies-international-health-regulations-and-emergency-committees</a>
+                    </p>
+
+                    <p id="ref4" class="padded-citation">[4] Ritchie, H., Mathieu, E., Rodés-Guirao, L., Appel, C., Giattino, C., Ortiz-Ospina, E.,
+                        Hasell, J., MacDonald, B., Beltekian, D., Dattanni, S., & Roser, M. (2021). <i>Coronavirus
+                            (COVID-19) cases.</i> Our World in Data. Retrieved October 23, 2021, from <a
+                            href="https://ourworldindata.org/covid-cases"
+                            target="_blank">https://ourworldindata.org/covid-cases</a></p>
+
+                    <p id="ref5" class="padded-citation">[5] World Health Organization. (n.d.). <i>Coronavirus disease (COVID-19).</i> <a
+                            href="https://www.who.int/health-topics/coronavirus#tab=tab_3"
+                            target="_blank">https://www.who.int/health-topics/coronavirus#tab=tab_3</a></p>
+
+                    <p id="ref6" class="padded-citation">[6] World Health Organization. (n.d.). <i>Tracking SARS-CoV-2 variants.</i> <a
+                            href="https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/"
+                            target="_blank">https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/</a></p>
+
+                    <p id="ref7" class="padded-citation">[7] WHO Team. (2021, April 30). <i>Coronavirus disease (COVID-19): How is it
+                            transmitted?.</i> World Health Organization. <a
+                            href="https://www.who.int/news-room/q-a-detail/coronavirus-disease-covid-19-how-is-it-transmitted"
+                            target="_blank">https://www.who.int/news-room/q-a-detail/coronavirus-disease-covid-19-how-is-it-transmitted</a>
+                    </p>
+                </section>
+
+                <section class="image-references">
+                    <h2 class="info-page-subheader2" style="font-weight: bold;">Multimedia references:</h2>
+                    <p>Man coughing on hand [Online image]. (2017). Wyoming Department of Health. <a href="https://health.wyo.gov/wp-content/uploads/2017/05/man-coughing-on-hand.jpg" target="_blank">https://health.wyo.gov/wp-content/uploads/2017/05/man-coughing-on-hand.jpg</a>
+                    </p>
+
+                    <p>Wooden blocks with the text: Myths [Online image]. (2015). Deposit Photos. <a href="https://depositphotos.com/91090680/stock-photo-wooden-blocks-with-the-text.html" target="_blank">https://depositphotos.com/91090680/stock-photo-wooden-blocks-with-the-text.html</a>
+                    </p>
+
+                    <p>World Health Organization. (2020, June 15). <i>Coronavirus disease (COVID-19)</i> [Video file]. YouTube. <a href="https://www.youtube.com/watch?v=i0ZabxXmH4Y" target="_blank">https://www.youtube.com/watch?v=i0ZabxXmH4Y</a></p>
+
+                    <p>6 main causes of poverty in the world [Online image]. (n.d.). Richmond Vale Academy. <a href="https://richmondvale.org/en/blog/6-main-causes-of-poverty-in-the-world" target="_blank">https://richmondvale.org/en/blog/6-main-causes-of-poverty-in-the-world</a></p>
+
+                    <p>[Untitled illustration of a blue shield and medicine with surrounding viruses]. (2020). Enovex. <a href="https://enovexrx.com/wp-content/uploads/2020/12/COVID-19-Prevention-Kit.png" target="_blank">https://enovexrx.com/wp-content/uploads/2020/12/COVID-19-Prevention-Kit.png</a>
+                    </p>
+
+                    <p>[Untitled illustration of the SARS-CoV-2 virus]. (n.d.). European Society of Cardiology. <a href="https://www.escardio.org/static-file/Escardio/Medias/education/covid-19/Covid-19-Webpage-banner-1170x240-opt2.jpg?mts=1594053162000.jpg" target="_blank">https://www.escardio.org/static-file/Escardio/Medias/education/covid-19/Covid-19-Webpage-banner-1170x240-opt2.jpg?mts=1594053162000.jpg</a></p>
+                </section>
+            </section>
+        </main>
+
+        <!-- Footer part of the info page -->
+        <footer>
+            <section class="site-info">
+                <div id="left-footer">
+                    <p>"Corona Info" is a site that aims to provide free, up-to-date information about the Coronavirus and the pandemic that started in March 2020.</p>
+                </div>
+
+                <div id="right-footer">
+                    <p>Contact Info:</p>
+                    <p>Email: b2025arddelacruz@pshs.edu.ph</p>
+                    <ul>
+                        <li><a href="https://www.youtube.com/channel/UC2CH-ZMA4MAxnDX2fJCil-Q" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/randolf.first/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/randolf_dela" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                    <a href="#">About Me</a>
+                </div>
+            </section>
+
+            <hr color="white">
+
+            <div class="credits">
+                <p>© 2021. Created by Airielle Randolf D. Dela Cruz</p>
+            </div>
+        </footer>
+
+        <!-- 
+            This is the JavaScript section of the HTML that
+            makes the collapsible buttons work.
+         -->
+        <script>
+            var coll = document.getElementsByClassName("info-collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("info-coll-active");
+                    var content = this.nextElementSibling;
+
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    }
+
+                    else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,1018 @@
+/****************************************************************************** 
+
+PREFACE:
+
+This CSS file is divided into the top-navigation part, home page, info page, footer part, and media query/ies. They are divided using comments.
+
+-webkit-, -moz-, and -ms- prefixes are used to increase cross-browser compatibility.
+Fallbacks are used to increase browser-version compatibility.
+
+******************************************************************************/
+
+
+/* Importing Nunito and Varela font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&family=Varela&display=swap');
+
+/* Importing Vegan Style local font (for site title) */
+@font-face {
+    font-family: "Vegan Style";
+    src: url("../images/fonts/vegan-style-font/VeganStylePersonalUse-5Y58.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+}
+
+/* 
+    These four pseudo-elements are used to create a custom scrollbar. 
+    Compatible with Safari, Opera, Edge, and Chrome.
+    Incompatible with IE and Firefox.
+*/
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #F1F1F1; }
+::-webkit-scrollbar-thumb { background: #888; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+a {
+    text-decoration: none;
+}
+
+figcaption {
+    text-align: center;
+    font-family: Calibri;
+}
+
+/* Selector for the top of the screen containing logo and global navigation. */
+.top {
+    position: sticky;
+    -webkit-position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.top-bar {
+    border: 1px solid rgb(44, 6, 6);;
+    padding: 10px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: #FF796A;
+}
+
+.top-bar-tl {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.site-logo {
+    float: left;
+    height: 40px;
+    width: auto;
+}
+
+.site-title {
+    float: left;
+    margin-left: 20px;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Vegan Style', sans-serif;
+    font-size: 20px;
+}
+
+.search-field {
+    height: 100%;
+    margin: auto 5% auto 0;
+    display: inline-block;
+    position: relative;
+}
+
+.search-field input {
+    outline: none;
+    border: none;
+    text-indent: 25px;
+    border: 1px solid black;
+}
+
+/* Used to change the color of the "Search" placeholder text in the searchbar. */
+.search-field input::placeholder {
+    color: black;
+}
+
+.search-field button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    transition: 0.2s;
+    color: black;
+}
+
+/* Used to change the color of the magnifying glass upon hover. */
+.search-field button:hover {
+    background: transparent;
+    cursor: pointer;
+    color: #AD4945;
+}
+
+.top-navigation {
+    border-width: 0 1px 1px 1px;
+    border-style: none solid solid solid;
+    border-color: rgb(44, 6, 6);
+    position: relative;
+    /* We are creating the font size of top-navigation 0 and resetting it
+    for each of the links because of the whitespace in "display: inline-block." */
+    font-size: 0;
+}
+
+.top-nav-link {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    width: 16.66%; /* Fallback, because calc() is not supported for some browsers */
+    width: calc(100% / 6);
+    font-size: 1em; /* Fallback, because "initial" is not supported some versions of Opera */
+    font-size: initial;
+    background-color: white;
+    transition: 0.2s;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.top-nav-link:not(#current-page):hover {
+    background-color: #AD4945;
+    color: white;
+    cursor: pointer;
+}
+
+.top-navigation #current-page {
+    background-color: #AD4945;
+    color: white;
+    color: among us balls;
+}
+
+
+
+
+
+
+
+/****************************************************************************** 
+
+MAIN CONTENT / HOME PAGE
+
+******************************************************************************/
+
+button:hover {
+    background-color: #AD4945;
+    color: white;
+    transition: 0.2s;
+}
+
+.decorative-image {
+    position: absolute;
+}
+
+#covid-img1 {
+    width: 100px;
+    height: auto;
+    left: 6%;
+    top: 10%;
+    -ms-transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+}
+
+#covid-img2 {
+    width: 80px;
+    height: auto;
+    right: 7%;
+    bottom: 8%;
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.home-header-area {
+    padding: 120px;
+    position: relative;
+    background-color: rgb(255, 244, 244);
+    border-bottom: 2px solid black;
+}
+
+/* Reserved for the other content pages not assigned for this project. */
+.wip-area {
+    padding: 120px;
+    position: relative;
+}
+
+.home-header {
+    font-family: 'Varela', sans-serif;
+    margin: 0;
+    text-align: center;
+    font-size: 55px; /* Fallback */
+    font-size: calc(12px + 3.66vw);
+}
+
+#subheader {
+    text-align: center;
+    font-size: 20px; /* Fallback */
+    font-size: calc(10px + 1vw);
+    font-family: 'Nunito', sans-serif;
+}
+
+.hero-image {
+    height: 400px;
+    background-image: url("../images/placeholder.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header-image1 {
+    background-image: url("../images/home-banner.jpg");
+}
+
+.main-navigation {
+    padding: 70px 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.main-nav-header {
+    text-align: center;
+    font-size: 50px; /* Fallback */
+    font-size: calc(12px + 3.2vw);
+    margin: 0;
+    font-family: 'Varela', sans-serif;
+}
+
+.left-text-align, .right-text-align {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-text-align > section {
+    margin-right: 12vw; /* Fallback */
+    margin-right: calc(50px + 9.64vw);
+}
+
+.right-text-align > section {
+    margin-left: 12vw; /* Fallback */
+    margin-left: calc(50px + 9.64vw);
+}
+
+.home-main > section:nth-child(2n + 3), .home-main > nav {
+    background-color: #FF9B90;
+}
+
+.home-main > section:nth-child(2n + 4) {
+    background-color: rgb(255, 244, 244);
+}
+
+.nav-section {
+    margin-top: 70px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-item {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+    flex: 0 1 13%; /* Fallback */
+    flex: 0 1 calc(80px + 7%);
+    transition: 0.2s;
+}
+
+.nav-img-container {
+    position: relative;
+    width: 100%;
+}
+
+.nav-img-container:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.nav-item:hover {
+    background-color: #AD4945;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-item p {
+    font-size: 20px;
+    font-size: calc(10px + 1vw);
+    text-align: center;
+}
+
+.nav-img-container img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 2px solid black;
+}
+
+.main-info-intro, .main-stats-intro, .main-variants-intro {
+    padding: 50px; /* Fallback */
+    padding: calc(50px + 1.4641vw);
+    border-bottom: 2px solid black;
+}
+
+#alt-stats-intro, #short-stats-word, .short-coll-text {
+    display: none;
+}
+
+.main-paragraph {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px; /* Fallback */
+    font-size: calc(12px + 0.59vw);
+}
+
+.main-paragraph-r {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px; /* Fallback */
+    font-size: calc(12px + 0.59vw);
+    width: 90%;
+}
+
+.main-button {
+    font-family: 'Nunito', sans-serif;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 20px; /* Fallback */
+    font-size: calc(10px + 1.5vw);
+    cursor: pointer;
+}
+
+.main-heading {
+    font-family: 'Varela', sans-serif;
+    margin: 0;
+    font-size: 45px; /* Fallback */
+    font-size: calc(32px + 1.5vw);
+}
+
+.main-image {
+    flex: 0 0 120px; /* Fallback */
+    flex: 0 0 calc(80px + 7.32vw);
+    min-width: 80px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    align-self: center;
+}
+
+.rfloat { float: right; }
+.lfloat { float: left; }
+
+.myths-and-effects-intro {
+    border-bottom: 2px solid black;
+}
+
+.myths-and-effects-intro:after { 
+    content: " "; 
+    display: block;
+    clear: both;
+}
+
+.myths, .effects {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding: 35px;
+    min-height: 190px;
+    max-height: 100%;
+}
+
+.myths {
+    border-right: 2px black solid;
+}
+
+.addi-heading {
+    font-size: 30px; /* Fallback */
+    font-size: calc(20px + 0.8vw);
+    font-family: 'Varela', sans-serif;
+}
+
+.addi-image {
+    min-width: 75px;
+    height: auto;
+    margin-top: 5px;
+}
+
+#myths-image {
+    width: 140px; /* Fallback */
+    width: calc(100px + 4.39vw);
+    border: 1px solid black;
+    background-color: rgb(255, 244, 244);
+}
+
+#effects-image {
+    width: 140px; /* Fallback */
+    width: calc(100px + 4.39vw);
+    border: 1px solid black;
+}
+
+.addi-button {
+    font-size: 16px; /* Fallback */
+    font-size: calc(10px + 0.7vw);
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.addi-nav-header {
+    margin-bottom: 20px; /* Fallback */
+    font-size: calc(15px + 0.8vw);
+}
+
+/* 
+    This is for the elements with the "reveal" class,
+    making them invisible upon initiation.
+*/
+.reveal > * {
+    position: relative;
+    -ms-transform: translateX(-150px);
+    -webkit-transform: translateX(-150px);
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+/*
+    This is when the "reveal" class elements reach a certain scrollheight
+    where they will actually be revealed and slide to the right.
+*/
+.reveal.active > * {
+    -ms-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/****************************************************************************** 
+
+MAIN CONTENT / INFO PAGE
+
+******************************************************************************/
+
+#info-page-hero {
+    background-image: url("../images/Covid19-info-page-hero.jpg");
+    height: 200px;
+}
+
+.addi-nav {
+    text-decoration: none;
+}
+
+.addi-nav::after {
+    content: "  >>";
+}
+
+.addi-nav:hover {
+    text-decoration: none;
+}
+
+.addi-nav:hover::after {
+    position: relative;
+    left: 10px;
+}
+
+ul li {
+    font-family: sans-serif;
+    margin-top: 5px;
+}
+
+.info-page-header {
+    text-align: center;
+}
+
+.info-page-header p {
+    font-weight: lighter;
+    margin: 0;
+}
+
+.info-page-subheader1 {
+    font-family: 'Varela', sans-serif;
+    font-size: 30px; /* Fallback */
+    font-size: calc(25px + 0.36vw);
+    margin: 0;
+}
+
+.info-page-subheader2 {
+    font-family: 'Varela', sans-serif;
+    font-size: 20px; /* Fallback */
+    font-size: calc(15px + 0.36vw);
+    font-weight: lighter;
+    margin: 0;
+}
+
+.info-collapsible {
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: -2px;
+    padding: 18px;
+    font-size: 1.2em;
+    text-align: left;
+    cursor: pointer;
+    display: block;
+}
+
+#info-video {
+    width: 90%; /* Fallback */
+    width: clamp(0px, 90%, 700px);
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #AD4945;
+}
+
+/* 
+    This is to add the red vertical bar when hovering over the
+    info page collapsibles. The :not() pseudo-class is used to
+    exclude the buttons from getting this effect when they are already open.
+ */
+.info-collapsible:not(.info-coll-active):hover {
+    background-color: white;
+    color: black;
+    box-shadow: 15px 0 0 -2px #AD4945 inset;
+    -webkit-box-shadow: 15px 0 0 -2px #AD4945 inset;
+    -moz-box-shadow: 15px 0 0 -2px #AD4945 inset;
+    text-indent: 13px;
+}
+
+/* 
+    Used to add the plus signs to the right of the info page buttons
+*/
+.info-collapsible::after {
+    content: "\002b";
+    float: right;
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+#first-collapsible {
+    display: block;
+    margin-top: 90px;
+}
+
+.info-coll-active {
+    background-color: #AD4945;
+    color: white;
+}
+
+/* 
+    Used to add the minus signs to the right of the info page buttons
+    when they are open
+*/
+.info-coll-active::after {
+    content: "\2212";
+    float: right;
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+.content {
+    display: none;
+    padding: 30px;
+    background-color: rgb(255, 244, 244);
+    margin: 0 20px;
+}
+
+.see-also, #info-video-wrapper {
+    margin-top: 100px;
+}
+
+.references {
+    margin-top: 100px;
+    overflow-wrap: break-word;
+}
+
+.padded-citation::before {
+    display: block; 
+    content: " "; 
+    margin-top: -300px; 
+    height: 300px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+.info::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.info-image {
+    width: 30%;
+    border: 2px solid black;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.variant-table {
+    border-collapse: collapse;
+}
+
+.references a {
+    text-decoration: underline;
+}
+
+.references p {
+    font-size: 18px;
+    font-family: Calibri, sans-serif;
+}
+
+.variant-table-wrapper {
+    overflow: auto;
+}
+
+tr:nth-child(odd) {
+    background-color: #EEE;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+.content-divisions {
+    width: 70%;
+}
+
+#circle-definition-image {
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+}
+
+
+
+/******************************************************************************* 
+
+FOOTER
+
+*******************************************************************************/
+
+/* 
+    This is for the pre-footer header that says "Stay Strong." 
+ */
+#pre-footer-header {
+    border: 3px solid white;
+    width: 70%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.pre-footer-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* This is for the pre-footer hero image */
+#pre-footer-image {
+    background-image: url("https://storage.googleapis.com/moviemaps/img/128k.q4kbp.940.jpg");
+    background-position-y: center;
+    position: relative;
+    z-index: 0;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #AD4945;
+    color: white;
+    border-top: 1px solid rgb(78, 0, 0);
+    padding: 30px;
+    font-family: Calibri;
+    font-size: 16px;
+}
+
+footer ul li {
+    display: inline-block;
+    font-size: 30px;
+    padding: 0 5px;
+    transition: 0.2s;
+}
+
+footer ul li:hover {
+    cursor: pointer;
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+/* This is for the site and contact information part of the footer */
+.site-info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.site-info > div {
+    box-sizing: border-box;
+    width: 45%;
+}
+
+.site-info #left-footer p:first-child {
+    margin: 0;
+}
+
+.site-info #right-footer p:first-child {
+    margin: 0;
+    font-weight: bold;
+}
+
+.site-info #right-footer {
+    text-align: right;
+}
+
+.site-info #right-footer a {
+    text-decoration: underline;
+    color: white;
+}
+
+.site-info #right-footer a:hover {
+    text-decoration: none;
+}
+
+.site-info #right-footer ul li i {
+    color: white;
+}
+
+footer ul {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+}
+
+.credits p {
+    text-align: center;
+}
+
+hr {
+    /* The usage of the three different colors is necessary for browser
+    compatibility, because coloring an <hr> differs for each browser for some reason. */
+    background-color: white;
+    border-color: white;
+    color: white;
+}
+
+/* This is for the "Image references" collapsible in the homepage. */
+.references-collapsible {
+    display: inline;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* This for the actual references */
+.references-collapsible-content {
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.references-collapsible-content a {
+    color: cyan;
+    text-decoration: underline;
+}
+
+.references-collapsible-content a:hover {
+    text-decoration: none;
+}
+
+.references-collapsible-content a:visited {
+    color: rgb(181, 102, 255);
+}
+
+/* This is to add the down-arrow symbol after the image references collapsible */
+.references-collapsible:after {
+    content: "";
+    border: solid white;
+    text-decoration: none;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    bottom: 1px;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+/* This is to add the up-arrow symbol after the image references opens */
+.coll-active:after {
+    content: "";
+    border: solid white;
+    text-decoration: none;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    top: 2px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+}
+
+
+
+
+
+
+
+
+/* 
+    This is the media query used to change the layout of the
+    pages when the screen or window is less than 700 pixels wide.
+*/
+@media screen and (max-width: 700px) {
+    .top-nav-link {font-size: 12px; }
+    .hero-image { height: 200px; }
+
+    .left-text-align > div {
+        margin-right: 100px; /* Fallback */
+        margin-right: calc(20px + 9.64vw);
+    }
+    
+    .right-text-align > div {
+        margin-left: 100px; /* Fallback */
+        margin-left: calc(20px + 9.64vw);
+    }
+
+    /* These two are used to make the homepage main navigation box smaller */
+    .nav-section { margin-top: 35px; }
+    .main-navigation { padding: 35px; }
+
+    /*
+        This is top stop the homepage main navigation items
+        not collide with each other  when the screen/window is too small. 
+    */
+    .nav-item { flex: 0 1 15%; }
+    
+    /* This is to make the myths and effects images disappear */
+    .addi-image { display: none; }
+
+    .myths, .effects {
+        padding: 0;
+        padding-top: 30px;
+        text-align: center;
+    }
+    
+    /* 
+        These four are used to display alternative text for
+        the info page and homepage navigation when
+        the screen is <=700px wide.
+    */
+    .short-coll-text { display: inline-block; }
+    .long-coll-text { display: none; }
+    #short-stats-word { display: inline-block; }
+    #long-stats-word { display: none; }
+
+    .content { margin: 0; }
+    footer { font-size: 12.8px; }
+    footer ul li { font-size: 20px; }
+    .references p { font-size: 14px; }
+}
+
+
+/* phones */
+@media screen and (max-width: 450px) {
+    .site-logo, .decorative-image, .main-stats-intro, .top-nav-link:first-child {
+        display: none;
+    }
+
+    .main-navigation {
+        padding: 10px;
+    }
+
+    .top-nav-link {
+        width: 20%;
+    }
+
+    .home-header-area {
+        padding: 60px;
+    }
+
+    .main-info-intro, .main-stats-intro, .main-variants-intro {
+        padding: 25px;
+    }
+
+    #info-video {
+        width: 100%;
+    }
+
+    #info-video-wrapper {
+        margin: 0;
+        margin-top: 100px;
+    }
+    
+    .nav-item {
+        flex: 0 1 100%;
+    }
+
+    .info-collapsible {
+        padding: 8px;
+    }
+
+    .top-nav-link {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .content p, .content ul, .short-coll-text, figcaption, .home-main p {
+        font-size: 12px !important;
+    }
+
+    .home-main h1 {
+        font-size: 20px;
+    }
+
+    .left-text-align > section {
+        margin: 0;
+    }
+
+    #alt-stats-intro {
+        display: flex;
+    }
+
+    .site-info {
+        display: block;
+    }
+
+    .site-info > div {
+        width: 100%;
+        text-align: left !important;
+        margin-top: 20px;
+    }
+
+    footer > section {
+        margin-top: 20px;
+    }
+
+    .wip-area {
+        padding: 60px;
+    }
+}

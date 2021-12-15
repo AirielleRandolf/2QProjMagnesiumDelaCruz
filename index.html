@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Corona Info - Information and statistics about COVID-19.</title>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Airielle Randolf D. Dela Cruz">
+        <meta name="keywords" content="CS3, COVID-19, Coronavirus, CoronaInfo, virus, pandemic">
+        <meta name="description" content="Corona Info provides latest information regarding the COVID-19 virus.">
+        <meta name="revised" content="06-11-2021">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/ci_stylesheet.css"> 
+
+        <!-- fontspaces -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Varela&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/logo.png">
+    </head>
+
+    <body>
+        <!-- 
+            This is the container for the top of the screen, 
+            containing the logo, search bar, and navigation links.
+         -->
+        <header class="top">
+            <!-- This is the container for the logo and searchbar. -->
+            <div class="top-bar">
+                <div class="top-bar-tl">
+                    <img src="images/logo.png" alt="" class="site-logo">
+                    <div class="site-title">
+                        <a href="index.html">CoronaInfo</a>
+                    </div>
+                </div>
+                
+                <!-- This is the searchbar. -->
+                <div class="search-field">
+                    <form>
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- These are the navigation links at the top of the screen. -->
+            <nav class="top-navigation">
+                <a class="top-nav-link" id="current-page" href="index.html">HOME</a>
+                <a class="top-nav-link" href="htdocs/info_page.html">INFO</a>
+                <a class="top-nav-link" href="htdocs/statistics_page.html">STATISTICS</a>
+                <a class="top-nav-link" href="htdocs/variants_page.html">VARIANTS</a>
+                <a class="top-nav-link" href="htdocs/myths_page.html">MYTHS</a>
+                <a class="top-nav-link" href="htdocs/effects_page.html">EFFECTS</a>
+            </nav>
+        </header>
+
+        <!-- 
+            This is the main content of the homepage.
+         -->
+        <main class="home-main">
+            <!-- This is the big header that appears when loading up the homepage. -->
+            <header class="home-header-area">
+                <img src="images/decor-covid-1.png" alt="" class="decorative-image" id="covid-img1">
+                <img src="images/decor-covid-1.png" alt="" class="decorative-image" id="covid-img2">
+                <h1 class="home-header">Stay Informed, Stay Protected.</h1>
+                <h3 id="subheader">Learn the latest information about COVID-19.</h3>
+            </header>
+
+            <!-- This is the COVID-19 banner that appears below the main header -->
+            <div class="hero-image" id="header-image1"></div>
+
+            <!-- 
+                This is the homepage navigation (separate from the 
+                global navigation at the top of the screen).
+             -->
+            <section class="main-navigation reveal">
+                <h2 class="main-nav-header">Navigation</h2>
+
+                <nav class="nav-section">
+                    <a href="htdocs/info_page.html" class="nav-item">
+                        <div class="nav-img-container">
+                            <img src="images/home-nav-img1.jpg" alt="Information Image">
+                        </div>
+                        <p>Info</p>
+                    </a>
+
+                    <a href="htdocs/statistics_page.html" class="nav-item">
+                        <div class="nav-img-container">
+                            <img src="images/home-nav-img2.png" alt="Statistics Image">
+                        </div>
+                        <p>
+                            <span id="long-stats-word">Statistics</span>
+                            <span id="short-stats-word">Stats</span>
+                        </p>
+                    </a>
+
+                    <a href="htdocs/variants_page.html" class="nav-item">
+                        <div class="nav-img-container">
+                            <img src="images/home-nav-img3.jpg" alt="Variants Image">
+                        </div>
+                        <p>Variants</p>
+                    </a>
+
+                    <a href="htdocs/myths_page.html" class="nav-item">
+                        <div class="nav-img-container">
+                            <img src="images/home-nav-img4.png" alt="Myths Image">
+                        </div>
+                        <p>Myths</p>
+                    </a>
+
+                    <a href="htdocs/effects_page.html" class="nav-item">
+                        <div class="nav-img-container">
+                            <img src="images/home-nav-img5.jfif" alt="Effects Image">
+                        </div>
+                        <p>Effects</p>
+                    </a>
+                </nav>
+            </section>
+
+            <!-- 
+                This is the info panel that leads to the info page.
+             -->
+            <section class="left-text-align main-info-intro reveal">
+                <section>
+                    <h1 class="main-heading">COVID-19 Info</h1>
+                    <p class="main-paragraph">What is COVID-19? How do I know that I don't have COVID-19? Find out about the latest COVID-19 information.</p>
+                    <form action="htdocs/info_page.html">
+                        <button class="main-button">Go to Info</button>
+                    </form>
+                </section>
+                <img src="images/coronavirus-green.png" class="main-image" alt="Main Info Image">
+            </section>
+
+            <!--
+                This is the statistics panel that leads to the statistics page.
+             -->
+            <section class="right-text-align main-stats-intro reveal">
+                <img src="images/statistics-symbol.png" class="main-image lfloat" alt="Main Statistics Image">
+                <section>
+                    <h1 class="main-heading">COVID-19 Statistics</h1>
+                    <p class="main-paragraph-r">Check out the number of current cases, recovered cases, or deaths from latest statistics regarding COVID-19 in your country or worldwide.</p>
+                    <form action="htdocs/statistics_page.html">
+                        <button class="main-button">Go to Statistics</button>
+                    </form>
+                </section>
+            </section>
+
+            <section></section>
+
+            <!--
+                This is the statistics panel on phone screens
+             -->
+            <section class="left-text-align main-stats-intro reveal" id="alt-stats-intro">
+                <section>
+                    <h1 class="main-heading">COVID-19 Statistics</h1>
+                    <p class="main-paragraph">Check out the number of current cases, recovered cases, or deaths from latest statistics regarding COVID-19 in your country or worldwide.</p>
+                    <form action="htdocs/statistics_page.html">
+                        <button class="main-button">Go to Statistics</button>
+                    </form>
+                </section>
+                <img src="images/statistics-symbol.png" class="main-image" alt="Main Statistics Image">
+            </section>
+
+            <!-- 
+                This is the variants panel that leads to the variants page.
+             -->
+            <section class="left-text-align main-variants-intro reveal">
+                <section>
+                    <h1 class="main-heading">COVID-19 Variants</h1>
+                    <p class="main-paragraph">Find out about the latest information and data from known COVID-19 variants, potential variants in the future, and identify their effects on people.</p>
+                    <form action="htdocs/variants_page.html">
+                        <button class="main-button">Go to Variants</button>
+                    </form>
+                </section>
+                <img src="images/coronavirus-yellow.png" class="main-image rfloat" alt="Main Variants Image">
+            </section>
+
+            <!--
+                This is the container for the myths and effects panels.
+                The two panels are side by side.
+             -->
+            <section class="myths-and-effects-intro">
+                <section class="myths reveal">
+                    <img src="images/myths-image.png" class="addi-image rfloat" alt="" id="myths-image">
+                    <h1 class="addi-heading">COVID-19 Myths</h1>
+                    <form action="htdocs/myths_page.html">
+                        <button class="addi-button">Go to Myths</button> 
+                    </form>
+                </section>
+
+                <section class="effects reveal">
+                    <img src="images/effects-image.jfif" class="addi-image rfloat" alt="" id="effects-image">
+                    <h1 class="addi-heading">Effects on Us</h1>
+                    <form action="htdocs/effects_page.html">
+                        <button class="addi-button">Go to Effects</button> 
+                    </form>
+                </section>
+            </section>
+
+            <!-- 
+                This is the container for the pre-footer
+                hero image with the header of "Stay Strong."
+             -->
+            <div class="pre-footer-wrapper">
+                <div class="hero-image" id="pre-footer-image"></div>
+                <h1 class="home-header" id="pre-footer-header">Stay Strong.</h1>
+            </div>
+        </main>
+
+        <!-- This is the footer -->
+        <footer>
+            <section class="site-info">
+                <div id="left-footer">
+                    <p>"Corona Info" is a site that aims to provide free, up-to-date information about the Coronavirus and the pandemic that started in March 2020.</p>
+                </div>
+
+                <div id="right-footer">
+                    <p>Contact Info:</p>
+                    <p>Email: b2025arddelacruz@pshs.edu.ph</p>
+                    <ul>
+                        <li><a href="https://www.youtube.com/channel/UC2CH-ZMA4MAxnDX2fJCil-Q" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/randolf.first/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/randolf_dela" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                    <a href="#">About Me</a>
+                </div>
+            </section>
+
+            <section>
+                <!-- 
+                    These are the image references. They are
+                    presented in a collapsible/accordion.
+                -->
+                <a class="references-collapsible">Image references</a>
+                <div class="references-collapsible-content">
+                    <p>Analyzing and gathering statistical data. Growth charts. Many business reports and magnifying glass. [Online image]. (n.d.). Shutterstock. <a href="https://www.shutterstock.com/image-photo/analyzing-gathering-statistical-data-growth-charts-1124867465" target="_blank">https://www.shutterstock.com/image-photo/analyzing-gathering-statistical-data-growth-charts-1124867465</a></p>
+
+                    <p>Eckert, A., & Higgins, D. (n.d.). This CDC illustration reveals ultrastructural morphology exhibited by coronaviruses [Online illustration]. StatNews. <a href="https://www.statnews.com/2020/02/11/disease-caused-by-the-novel-coronavirus-has-name-covid-19/" target="_blank">https://www.statnews.com/2020/02/11/disease-caused-by-the-novel-coronavirus-has-name-covid-19/</a></p>
+
+                    <p>Fusion Medical Animation. (2020). New visualisation of the Covid-19 virus [Online illustration]. Unsplash. <a href="https://unsplash.com/photos/rnr8D3FNUNY" target="_blank">https://unsplash.com/photos/rnr8D3FNUNY</a></p>
+
+                    <p>Myths word on card index paper [Online image]. (n.d.). Shutterstock. <a href="https://www.shutterstock.com/image-photo/myths-word-on-card-index-paper-591219035" target="_blank">https://www.shutterstock.com/image-photo/myths-word-on-card-index-paper-591219035</a></p>
+
+                    <p>Photo of St. Bonaventure Hospital [Online image]. (n.d.). MovieMaps. <a href="https://moviemaps.org/images/128k" target="_blank">https://moviemaps.org/images/128k</a></p>
+
+                    <p>Question mark 3d gold yellow rendering illustration interrogation point question icon asking sign punctuation mark sign symbol isolated on white with thinking relaxing stick man [Online image]. (n.d.). Shutterstock. <a href="https://www.shutterstock.com/image-illustration/question-mark-3d-gold-yellow-rendering-719478730" target="_blank">https://www.shutterstock.com/image-illustration/question-mark-3d-gold-yellow-rendering-719478730</a></p>
+
+                    <p>Ran, H. (2020). South Korean soldiers in protective gears sanitize shacks at Guryong village in Seoul, South Korea [Online image]. REUTERS. <a href="https://www.reuters.com/news/picture/south-korean-president-declares-war-on-c-idUSKBN20Q04P" target="_blank">https://www.reuters.com/news/picture/south-korean-president-declares-war-on-c-idUSKBN20Q04P</a></p>
+
+                    <p>[Untitled illustration of a bar chart with a red trendline]. (n.d.). Data Privacy Manager. <a href="https://dataprivacymanager.net/wp-content/uploads/2020/02/100-Data-Privacy-statistics-for-2020-1-1024x536.png" target="_blank">https://dataprivacymanager.net/wp-content/uploads/2020/02/100-Data-Privacy-statistics-for-2020-1-1024x536.png</a></p>
+
+                    <p>[Untitled illustration of COVID-19 in a blue background]. (n.d.). World Health Organization. <a href="https://www.who.int/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-1024v.jpg?Culture=en&sfvrsn=4dba955c_6" target="_blank">https://www.who.int/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-1024v.jpg?Culture=en&sfvrsn=4dba955c_6</a></p>
+
+                    <p>[Untitled illustration of COVID-19 in a gray background]. (n.d.). Poncat. <a href="https://www.pon-cat.com/application/files/7915/8400/2602/home-banner.jpg" target="_blank">https://www.pon-cat.com/application/files/7915/8400/2602/home-banner.jpg</a></p>
+
+                    <p>[Untitled illustration of COVID-19 in a green background]. (n.d.). UNESCO. <a href="https://uil.unesco.org/covid-19-response" target="_blank">https://uil.unesco.org/covid-19-response</a></p>
+
+                    <p>[Untitled illustration of COVID-19 in three different variants]. (n.d.). Health Matters. <a href="https://healthmatters.nyp.org/what-to-know-about-the-new-coronavirus-variants/" target="_blank">https://healthmatters.nyp.org/what-to-know-about-the-new-coronavirus-variants/</a></p>
+
+                    <p>[Untitled illustration of COVID-19 in three different variants]. (n.d.). HealthXChange. <a href="https://www.healthxchange.sg/sites/hexassets/Assets/men/covid-19-variants-types-how-to-stay-safe.jpg" target="_blank">https://www.healthxchange.sg/sites/hexassets/Assets/men/covid-19-variants-types-how-to-stay-safe.jpg</a></p>
+                </div>
+            </section>
+
+            <hr color="white">
+
+            <div class="credits">
+                <p>© 2021. Created by Airielle Randolf D. Dela Cruz</p>
+            </div>
+        </footer>
+
+
+        <!-- 
+            This is the JavaScript code responsible for making the divisions
+            slide to the right depending on scroll-height and for 
+            the collapsible (Image References) to show its content when clicked.
+         -->
+        <script>
+            window.addEventListener('scroll', reveal);
+
+            /*
+                This JS code used to reveal elements upon scrolldown is created by Coding Snow (2020).
+
+                https://www.youtube.com/watch?v=VplDlwLTR50
+            */
+
+            function reveal() {
+                var reveals = document.querySelectorAll('.reveal');
+
+                for(var i = 0; i < reveals.length; i++) {
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+
+                    if(revealtop < windowheight - revealpoint) {
+                        reveals[i].classList.add('active');
+                    }
+                }
+            }
+
+            var coll = document.getElementsByClassName("references-collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("coll-active");
+                    var content = this.nextElementSibling;
+                    
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    }
+                    
+                    else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
