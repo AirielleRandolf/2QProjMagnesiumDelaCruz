@@ -19,6 +19,11 @@ Fallbacks are used to increase browser-version compatibility.
     src: url("../images/fonts/vegan-style-font/VeganStylePersonalUse-5Y58.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Gilroy";
+    src: url("../images/fonts/Gilroy-Regular.woff") format("woff");
+}
+
 body {
     margin: 0;
     position: relative;
@@ -488,213 +493,6 @@ button:hover {
 
 
 
-
-
-
-
-
-/****************************************************************************** 
-
-MAIN CONTENT / INFO PAGE
-
-******************************************************************************/
-
-#info-page-hero {
-    background-image: url("../images/Covid19-info-page-hero.jpg");
-    height: 200px;
-}
-
-.addi-nav {
-    text-decoration: none;
-}
-
-.addi-nav::after {
-    content: "  >>";
-}
-
-.addi-nav:hover {
-    text-decoration: none;
-}
-
-.addi-nav:hover::after {
-    position: relative;
-    left: 10px;
-}
-
-ul li {
-    font-family: sans-serif;
-    margin-top: 5px;
-}
-
-.info-page-header {
-    text-align: center;
-}
-
-.info-page-header p {
-    font-weight: lighter;
-    margin: 0;
-}
-
-.info-page-subheader1 {
-    font-family: 'Varela', sans-serif;
-    font-size: 30px; /* Fallback */
-    font-size: calc(25px + 0.36vw);
-    margin: 0;
-}
-
-.info-page-subheader2 {
-    font-family: 'Varela', sans-serif;
-    font-size: 20px; /* Fallback */
-    font-size: calc(15px + 0.36vw);
-    font-weight: lighter;
-    margin: 0;
-}
-
-.info-collapsible {
-    width: 100%;
-    background-color: white;
-    border: 2px solid black;
-    margin-top: -2px;
-    padding: 18px;
-    font-size: 1.2em;
-    text-align: left;
-    cursor: pointer;
-    display: block;
-}
-
-#info-video {
-    width: 90%; /* Fallback */
-    width: clamp(0px, 90%, 700px);
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #AD4945;
-}
-
-/* 
-    This is to add the red vertical bar when hovering over the
-    info page collapsibles. The :not() pseudo-class is used to
-    exclude the buttons from getting this effect when they are already open.
- */
-.info-collapsible:not(.info-coll-active):hover {
-    background-color: white;
-    color: black;
-    box-shadow: 15px 0 0 -2px #AD4945 inset;
-    -webkit-box-shadow: 15px 0 0 -2px #AD4945 inset;
-    -moz-box-shadow: 15px 0 0 -2px #AD4945 inset;
-    text-indent: 13px;
-}
-
-/* 
-    Used to add the plus signs to the right of the info page buttons
-*/
-.info-collapsible::after {
-    content: "\002b";
-    float: right;
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
-}
-
-#first-collapsible {
-    display: block;
-    margin-top: 90px;
-}
-
-.info-coll-active {
-    background-color: #AD4945;
-    color: white;
-}
-
-/* 
-    Used to add the minus signs to the right of the info page buttons
-    when they are open
-*/
-.info-coll-active::after {
-    content: "\2212";
-    float: right;
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
-}
-
-.content {
-    display: none;
-    padding: 30px;
-    background-color: rgb(255, 244, 244);
-    margin: 0 20px;
-}
-
-.see-also, #info-video-wrapper {
-    margin-top: 100px;
-}
-
-.references {
-    margin-top: 100px;
-    overflow-wrap: break-word;
-}
-
-.padded-citation::before {
-    display: block; 
-    content: " "; 
-    margin-top: -300px; 
-    height: 300px; 
-    visibility: hidden; 
-    pointer-events: none;
-}
-
-.info::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.info-image {
-    width: 30%;
-    border: 2px solid black;
-    background-color: white;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-.variant-table {
-    border-collapse: collapse;
-}
-
-.references a {
-    text-decoration: underline;
-}
-
-.references p {
-    font-size: 18px;
-    font-family: Calibri, sans-serif;
-}
-
-.variant-table-wrapper {
-    overflow: auto;
-}
-
-tr:nth-child(odd) {
-    background-color: #EEE;
-}
-
-tr:nth-child(even) {
-    background-color: white;
-}
-
-.content-divisions {
-    width: 70%;
-}
-
-#circle-definition-image {
-    clip-path: circle(50% at 50% 50%);
-    border-radius: 50%;
-}
-
-
-
 /******************************************************************************* 
 
 FOOTER
@@ -823,6 +621,9 @@ hr {
     display: inline;
     text-decoration: underline;
     cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
     user-select: none;
 }
 
@@ -876,11 +677,6 @@ hr {
     -webkit-transform: rotate(-135deg);
     -ms-transform: rotate(-135deg);
 }
-
-
-
-
-
 
 
 
@@ -940,8 +736,12 @@ hr {
 
 /* phones */
 @media screen and (max-width: 450px) {
-    .site-logo, .decorative-image, .main-stats-intro, .top-nav-link:first-child {
+    .site-logo, .decorative-image, .main-stats-intro, .top-nav-link:first-child, .search-field {
         display: none;
+    }
+
+    .top-bar {
+        justify-content: center;
     }
 
     .main-navigation {
@@ -988,9 +788,10 @@ hr {
 
     .home-main h1 {
         font-size: 20px;
+        color: #AD4945
     }
 
-    .left-text-align > section {
+    .left-text-align > section, .site-title, .top-bar-tl {
         margin: 0;
     }
 

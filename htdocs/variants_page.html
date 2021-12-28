@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../css/ci_stylesheet.css">
+        <link rel="stylesheet" href="../css/variants_page.css">
 
         <!-- fontspaces -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,10 +53,25 @@
         </header>
 
         <main>
-            <section class="wip-area">
-                <h1 class="home-header">Oops!</h1>
-                <h3 id="subheader">This page is currently being built. Come back when it's done!</h3>
-            </section>
+            <button class="modal-button" onclick="document.getElementById('modal1').style.display = 'block'">Modal button</button>
+
+            <div class="modal" id="modal1">
+                <div class="modal-box">
+                    <p>how</p>
+                    <span class="close-button" onclick="document.getElementById('modal1').style.display = 'none'">&times;</span>
+                </div>
+            </div>
+
+            <button class="modal-button" onclick="document.getElementById('modal2').style.display = 'block'">Modal button</button>
+
+            <div class="modal" id="modal2">
+                <div class="modal-box">
+                    <p>why</p>
+                    <span class="close-button" onclick="document.getElementById('modal2').style.display = 'none'">&times;</span>
+                </div>
+            </div>
+            
+            <div style="height: 300px"></div>
         </main>
 
         <footer>
