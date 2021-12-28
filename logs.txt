@@ -1,4 +1,13 @@
-v1.2 (15/12/2021):
+v1.3 (28/12/2021):
+-Added statistics page
+
+
+
+
+
+
+
+v1.2 (13/12/2021):
 -Added semantic tags, particularly <section>, <article>, <figure>, and <aside> tags.
 
 -Fixed the citation links of the info page to remove their underline upon hover instead of add underline (they were already underlined, so hovering originally had no visual effect).
@@ -16,6 +25,9 @@ v1.2 (15/12/2021):
 
 
 	
+
+
+
 
 v1.1 (05/11/2021):
 -Added an image banner on the information page of the website.
