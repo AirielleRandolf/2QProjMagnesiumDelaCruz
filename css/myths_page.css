@@ -1,0 +1,101 @@
+h1, h2, h3 {
+    font-family: 'Varela';
+}
+
+h2 {
+    margin-top: 100px;
+}
+
+main {
+    margin: 50px;
+    width: 70%;
+}
+
+main p {
+    font-family: Calibri, sans-serif;
+    font-size: 1.1em;
+}
+
+main h1::first-letter {
+    font-size: 1.3em;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.selectors {
+    background-color: #FFF4F4;
+    width: 20%;
+    border: 1px solid black;
+    margin-left: auto;
+    position: sticky;
+    top: 25%;
+    transform: translateX(-10%);
+    padding: 0;
+}
+
+.selectors ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.selectors ul > li {
+    display: block;
+    margin: 10px 0;
+}
+
+.selectors a:hover {
+    color: black;
+}
+
+.arrows {
+    color: #AD4945;
+}
+
+.padded::before {
+    display: block; 
+    content: " "; 
+    margin-top: -300px; 
+    height: 300px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+#myths-hero-image {
+    height: 150px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/30/12/16/question-mark-1872665_960_720.jpg");
+}
+
+#myths-header {
+    width: 70%;
+    margin-top: -30px;
+    border-radius: 30px;
+    padding: 30px 50px 0px 50px;
+    background-color: white;
+}
+
+#myths-header h1 {
+    font-size: 45px;
+    font-size: calc(32px + 1.5vw);
+    margin: 0;
+}
+
+#myths-header p {
+    padding-left: 3em;
+    font-family: 'Nunito';
+    margin: 0;
+}
+
+#arrow1 {
+    opacity: 1;
+}
+
+#arrow2 {
+    opacity: 0;
+}

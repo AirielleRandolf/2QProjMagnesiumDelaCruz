@@ -1,6 +1,14 @@
+v1.4 (09/01/2021):
+-Added variants page
+-Added myths page
+-Changed the hero image (topmost image) of the statistics page
+
+
+
+
+
 v1.3 (28/12/2021):
 -Added statistics page
-
 
 
 

@@ -44,6 +44,20 @@ a {
     text-decoration: none;
 }
 
+.references a {
+    word-wrap: break-word;
+    text-decoration: underline;
+}
+
+.references a:hover {
+    text-decoration: none;
+}
+
+.references p {
+    margin: 18px;
+    font-size: 0.8em;
+}
+
 figcaption {
     text-align: center;
     font-family: Calibri;
@@ -490,6 +504,14 @@ button:hover {
     opacity: 1;
 }
 
+.padded-citation::before {
+    display: block; 
+    content: " "; 
+    margin-top: -300px; 
+    height: 300px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
 
 
 
@@ -782,13 +804,8 @@ hr {
         padding: 8px;
     }
 
-    .content p, .content ul, .short-coll-text, figcaption, .home-main p {
-        font-size: 12px !important;
-    }
-
     .home-main h1 {
         font-size: 20px;
-        color: #AD4945
     }
 
     .left-text-align > section, .site-title, .top-bar-tl {

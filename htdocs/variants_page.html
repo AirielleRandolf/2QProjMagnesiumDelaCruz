@@ -8,7 +8,7 @@
         <meta name="author" content="Airielle Randolf D. Dela Cruz">
         <meta name="keywords" content="CS3, COVID-19, Coronavirus, CoronaInfo, virus, pandemic">
         <meta name="description" content="Corona Info provides latest information regarding the COVID-19 virus.">
-        <meta name="revised" content="06-11-2021">
+        <meta name="revised" content="08-01-2022">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../css/ci_stylesheet.css">
@@ -52,26 +52,380 @@
             </nav>
         </header>
 
+        <div class="hero-image" id="variants-hero-image"></div>
+
+        <header id="variants-header">
+            <h1>COVID-19 Variants</h1>
+            <p>PUBLISHED: January 9, 2022</p>
+            <p>LAST UPDATED: January 9, 2022</p>
+        </header>
+
         <main>
-            <button class="modal-button" onclick="document.getElementById('modal1').style.display = 'block'">Modal button</button>
-
-            <div class="modal" id="modal1">
-                <div class="modal-box">
-                    <p>how</p>
-                    <span class="close-button" onclick="document.getElementById('modal1').style.display = 'none'">&times;</span>
-                </div>
-            </div>
-
-            <button class="modal-button" onclick="document.getElementById('modal2').style.display = 'block'">Modal button</button>
-
-            <div class="modal" id="modal2">
-                <div class="modal-box">
-                    <p>why</p>
-                    <span class="close-button" onclick="document.getElementById('modal2').style.display = 'none'">&times;</span>
-                </div>
-            </div>
+            <h1>What are Variants?</h1>
+            <p>All viruses, including SARS-CoV-2, change over time via mutation -- a change in the virus' genetic code. Sometimes, when these mutations are significant enough, a new variant of the virus emerges. Lineages, a group of viruses with the same common ancestor, can also form. <sup><a href="#ref1">[1]</a></sup> Changes from these mutations can increase the virus' lifespan, transmissibility, disease severity, and so on.<sup><a href="#ref2">[2]</a></sup>
             
-            <div style="height: 300px"></div>
+            <br><br>
+        
+            There are three major categories that a variant can be in:<sup><a href="#ref3">[3]</a></sup><br><br></p>
+
+            <ol>
+                <li><p><strong>Variant under Monitoring</strong> - A variant that is suspected to affect the virus' characteristics and is under assessment for further evidence.<sup><a href="#ref2">[2]</a></sup></p></li>
+                <li><p><strong>Variant of Interest</strong> - A variant that is known or predicted to affect the virus' characteristics with increasing relative prevalence.<sup><a href="#ref2">[2]</a></sup></p></li>
+                <li><p><strong>Variant of Concern</strong> - A variant of interest that has become significant for the global public health.<sup><a href="#ref2">[2]</a></sup></p></li>
+                <li><p><strong>Variant of High Consequence</strong> - A variant that is incredibly severe and shows evidence of reduced vaccine effectiveness.<sup><a href="#ref3">[3]</a></sup></p></li>
+            </ol>
+
+            <p><br><br>This page will look at the current variants of interest (VOIs) and variants of concern (VOCs) inside the cards below. There are currently no variants of high consequence (VOHCs).</p>
+
+
+            <h1>Variants of Concern (WHO)</h1>
+
+            <!-- Alpha variant -->
+            <div class="grid-wrapper">
+                <div class="variants-buttons">
+                    <div class="modal-button" onclick="openModal('alpha')">
+                        <div class="modal-button-image alpha-img"></div>
+
+                        <p>Alpha</p>
+                    </div>
+
+                    <section class="modal" id="modal-alpha">
+                        <div class="modal-box">
+                            <div class="side-image alpha-img" id="info-alpha-img"></div>
+
+                            <article class="info">
+                                <h1>Alpha Variant</h1>
+
+                                <p>The Alpha Variant, also known as B.1.1.7 (its lineage), was first detected in the United Kingdom in November/early December of 2020, but was traced to have existed since September 2020.<sup><a href="#ref4" onclick="closeModal('alpha')">[4]</a></sup> This variant is also known as 20I (V1) and GRY.<sup><a href="#ref2" onclick="closeModal('alpha')">[2]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Transmissibility</h3>
+
+                                <p>The Alpha variant, according to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8128288/" target="_blank">this study</a> by Davies et al. (2021), is <strong>estimated to be around 43% to 90% more transmissible than any of the SARS-Cov-2 variants prior.</strong><sup><a href="#ref5" onclick="closeModal('alpha')">[5]</a></sup> A separate <a href="https://www.nature.com/articles/s41586-021-03470-x" target="_blank">study</a> by Volz et al. (2021) shows that the Alpha variant "has a substantial transmission advantage over other lineages, with a 50% to 100% higher reproduction number."<sup><a href="#ref6" onclick="closeModal('alpha')">[6]</a></sup>
+                                
+                                <br><br>
+                                
+                                The most significant mutation from the Alpha variant is an N501Y mutation on the spike protein, which the virus uses to bind to human ACE2 receptors, theoretically making it more infectious.<sup><a href="#ref7" onclick="closeModal('alpha')">[7]</a></sup>
+                                </p>
+
+                                <br><br>
+
+                                <h3>Virulence / Lethality</h3>
+
+                                <p>
+                                    Some studies, like <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7941603/#idm139956915572896title" target="_blank">this one</a> by Challen et al. (2021), show a higher mortality rate for B.1.1.7.<sup><a href="#ref8" onclick="closeModal('alpha')">[8]</a></sup> Other studies like <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8041365/" target="_blank">this ecological study</a> by Graham et al. (2021) shows no significant difference in virulence.<sup><a href="#ref9" onclick="closeModal('alpha')">[9]</a></sup>
+                                </p>
+
+                                <br><br>
+
+                                <h3>Spread throughout the World</h3>
+
+                                <p>The Alpha variant started its spread in the United Kingdom, and has since been found in 175 countries (as of Dec-28-2021).<sup><a href="#ref10" onclick="document.getElementById('modal1').style.display = 'none'">[10]</a></sup> As of 29 December 2021, over 1.1 million sequences in the B.1.1.7 lineage have been detected worldwide.<sup><a href="#ref11" onclick="closeModal('alpha')">[11]</a></sup></p>
+                            </article>
+
+                            <span class="close-button" onclick="closeModal('alpha')">&times;</span>
+                        </div>
+                    </section>
+
+
+
+                    <!-- Beta Variant -->
+                    <div class="modal-button" onclick="openModal('beta')">
+                        <div class="modal-button-image beta-img"></div>
+                        
+                        <p>Beta</p>
+                    </div>
+
+                    <div class="modal" id="modal-beta">
+                        <div class="modal-box">
+                            <div class="side-image beta-img" id="info-beta-img"></div>
+
+                            <section class="info">
+                                <h1>Beta Variant</h1>
+
+                                <p>The Beta Variant, also known as B.1.351 (its lineage), first appeared in the Eastern Cape of South Africa in December of 2020.<sup><a href="#ref12" onclick="closeModal('beta')">[12]</a></sup> Spatiotemporal phylogeographic analysis shows that the virus may have existed since early July or August 2020.<sup><a href="#ref13" onclick="closeModal('beta')">[13]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Disease severity and Transmissibility</h3>
+
+                                <p>The Beta variant has seemed to increase transmission and severity among the youth and produces serious illnesses more frequently than previous variants. Former Minister of Health Zweli Mkhize stated of evidence showing that the second wave of Covid-19 cases in South Africa was driven by the Beta variant.<sup><a href="#ref14" onclick="closeModal('beta')">[14]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Vaccine efficacy</h3>
+
+                                <p>The Beta variant is less susceptible to vaccines, especially spike protein-dependent vaccines, due to its E484K mutation that lets it escape from neutralizing antibodies.<sup><a href="#ref15" onclick="closeModal('beta')">[15]</a></sup></p>
+                            </section>
+
+                            <span class="close-button" onclick="closeModal('beta')">&times;</span>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Gamma variant -->
+                    <div class="modal-button" onclick="openModal('gamma')">
+                        <div class="modal-button-image gamma-img"></div>
+                    
+                        <p>Gamma</p>
+                    </div>
+
+                    <div class="modal" id="modal-gamma">
+                        <div class="modal-box">
+                            <div class="side-image gamma-img" id="info-gamma-img"></div>
+
+                            <section class="info">
+                                <h1>Gamma Variant</h1>
+
+                                <p>The Gamma Variant, also known as P.1, came from Amazones, Brazil and was first detected in Japan in January 2021.<sup><a href="#ref16" onclick="closeModal('gamma')">[16]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Viral structure</h3>
+
+                                <p>The key mutations of the Gamma Variant are N501Y (increase in transmission), K417T (increase in transmission), E484K (reduced vaccine efficacy). All of these mutations are also present in the Beta Variant, making the Gamma Variant very similar to the former variant in terms of structure.<sup><a href="#ref17" onclick="closeModal('gamma')">[17]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Spread throughout the world</h3>
+
+                                <p>As of December 29, 2021, 63 countries have the Gamma variant with over 50,000 cases worldwide according to Wikipedia.<sup><a href="#ref18" onclick="closeModal('gamma')">[18]</a></sup></p>
+                            </section>
+
+                            <span class="close-button" onclick="closeModal('gamma')">&times;</span>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Delta Variant -->
+                    <div class="modal-button" onclick="openModal('delta')">
+                        <div class="modal-button-image delta-img"></div>    
+                        
+                        <p>Delta</p>
+                    </div>
+
+                    <div class="modal" id="modal-delta">
+                        <div class="modal-box">
+                            <div class="side-image delta-img" id="info-delta-img"></div>
+
+                            <section class="info">
+                                <h1>Delta Variant</h1>
+
+                                <p>The Delta Variant, also known as B.1.617.2, was first detected in India in October 2020 and has, as of late 2021, become the leading variant of the world.<sup><a href="#ref19" onclick="closeModal('delta')">[19]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Transmissibility</h3>
+
+                                <p>According to reports from UK scientists, the Delta variant is roughly 40% to 60% more transmissible than the Alpha variant from UK. This would mean that the Delta variant would be more than 200% more transmissible than the original SARS-CoV-2 strain.<sup><a href="#ref20" onclick="closeModal('delta')">[20]</a></sup> A non-peer reviewed study by Li et al. (2021) showed that the viral load of Delta (the amount of viruses in the body) was approximately 1000 times more than initial variants, contributing to its transmissibility.<sup><a href="#ref21" onclick="closeModal('delta')">[21]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Virulence</h3>
+
+                                <p>According to a paper posted by researchers at National Centre for Infectious Diseases in Singapore, victims of the Delta Variant are more likely to develop oxygen-requiring illnesses (e.g., pneumonia) and death than victims of the Alpha or earlier variants.<sup><a href="#ref22">[22]</a></sup> A weekly report of the WHO also stated that the Delta variant gave an "increased risk of hospitalization" for its victims.<sup><a href="#ref23">[23]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Spread throughout the world</h3>
+
+                                <p>As of December 29, 2021, there are 178 countries infected by the Delta variant, with over 3 million cases worldwide according to Wikipedia.<sup><a href="#ref24" onclick="closeModal('delta')">[24]</a></sup></p>
+                            </section>
+
+                            <span class="close-button" onclick="closeModal('delta')">&times;</span>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- omicron -->
+                    <div class="modal-button" id="omicron" onclick="openModal('omicron')">
+                        <div class="modal-button-image omicron-img"></div>    
+                        
+                        <p>Omicron</p>
+                    </div>
+
+                    <div class="modal" id="modal-omicron">
+                        <div class="modal-box">
+                            <div class="side-image omicron-img" id="info-omicron-img"></div>
+
+                            <section class="info">
+                                <h1>Omicron Variant</h1>
+
+                                <p>The Omicron Variant, also known as the B.1.1.529, was first detected from South Africa in 24th of November, 2021.<sup><a href="#ref25" onclick="closeModal('omicron')">[25]</a></sup> It was detected in a sample from November 9 of that year.</p>
+
+                                <br><br>
+
+                                <h3>Transmissibility</h3>
+
+                                <p>As of November 26, 2021, it's not clear whether or not the Omicron variant is more contagious than its previous counterparts.<sup><a href="#ref26" onclick="closeModal('omicron')">[26]</a></sup> </p>
+
+                                <br><br>
+
+                                <h3>Severity</h3>
+
+                                <p>It's also not yet clear whether or not the Omicron variant causes more severe diseases than the Delta variant. There have been an increasing rate of hospitalization in South Africa, but whether or not this is due to the Omicron variant is still unclear as of November 2021.<sup><a href="#ref26" onclick="closeModal('omicron')">[26]</a></sup> A <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-50-severity-omicron/">study</a> by Ferguson et al. (2021) even showed a decreased risk of hospitalization from the Omicron variant when compared to the Delta variant.<sup><a href="#ref27" onclick="closeModal('omicron')">[27]</a></sup> Still, it is imperative for people to follow the WHO's guidelines to avoid contracting this new variant of COVID-19.</p>
+                            </section>
+
+                            <span class="close-button" onclick="closeModal('omicron')">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h1>Variants of Interest (WHO)</h1>
+            <div class="grid-wrapper">
+                <div class="variants-buttons" id="two-col">
+                    <div class="modal-button" onclick="openModal('lambda')">
+                        <div class="modal-button-image lambda-img"></div>
+
+                        <p>Lambda</p>
+                    </div>
+
+                    <div class="modal" id="modal-lambda">
+                        <div class="modal-box">
+                            <div class="side-image lambda-img" id="info-lambda-img"></div>
+
+                            <section class="info">
+                                <h1>Lambda Variant</h1>
+
+                                <p>The Lambda variant, also known as C.37, was first detected in Peru in August of 2020.<sup><a href="#ref28" onclick="closeModal('lambda')">[28]</a></sup> The variant was designated to "Variant of Interests" in June 14, 2021.<sup><a href="#ref2" onclick="closeModal('lambda')">[2]</a></p>
+
+                                <br><br>
+
+                                <h3>Spread throughout the world</h3>
+
+                                <p>As of December 11, 2022, there are over 4,000 cases of the Lambda variant throughout the world according to Wikipedia.<sup><a href="#ref30" onclick="closeModal('lambda')">[30]</a></sup></p>
+                            </section>
+
+                            <span class="close-button" onclick="closeModal('lambda')">&times;</span>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="modal-button" onclick="openModal('mu')">
+                        <div class="modal-button-image mu-img"></div>
+                        
+                        <p>Mu</p>
+                    </div>
+
+                    <div class="modal" id="modal-mu">
+                        <div class="modal-box">
+                            <div class="side-image mu-img" id="info-mu-img"></div>
+
+                            <section class="info">
+                                <h1>Mu Variant</h1>
+
+                                <p>The Mu Variant, also known as B.1.621, was first detected in Colombia in January 2021.<sup><a href="#ref2" onclick="closeModal('mu')">[2]</a></sup></p>
+
+                                <br><br>
+
+                                <h3>Spread throughout the world</h3>
+
+                                <p>As of December 30, 2021, the Mu variant has over 14,000 cases worldwide according to Wikipedia.<sup><a href="#ref29" onclick="closeModal('mu')">[29]</a></sup></p>
+                            </section>
+
+                            <span class="close-button" onclick="closeModal('mu')">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <details class="variants references" id="research-ref">
+                <summary><h2>References:</h2></summary>
+
+                <p class="padded-citation" id="ref1">[1] Centers for Disease Control and Prevention. (2021, December 13). <i>What you need to know about variants.</i> <a href="https://www.cdc.gov/coronavirus/2019-ncov/variants/about-variants.html" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/variants/about-variants.html</a></p>
+
+                <p class="padded-citation" id="ref2">[2] World Health Organization (2022, January 4). <i>Tracking SARS-CoV-2 variants.</i> <a href="https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/" target="_blank">https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/</a></p>
+
+                <p class="padded-citation" id="ref3">[3] Centers for Disease Control and Prevention. (2021, December 1). <i>SARS-CoV-2 variant classifications and definitions.</i> <a href="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html</a></p>
+
+                <p class="padded-citation" id="ref4">[4] Rambaut, A., Loman, N., Pybus, O., Barclay, W., Barrett, J., Carabelli, A., Connor, T., Peacock, T., Robertson, D. L., Volz, E., & COVID-19 Genomics UK (COG-UK) Consortium. (2020). <i>Preliminary genomic characterisation of an emergent SARS-CoV-2 lineage in the UK defined by a novel set of spike mutations.</i> Virological. <a href="https://virological.org/t/preliminary-genomic-characterisation-of-an-emergent-sars-cov-2-lineage-in-the-uk-defined-by-a-novel-set-of-spike-mutations/563" target="_blank">https://virological.org/t/preliminary-genomic-characterisation-of-an-emergent-sars-cov-2-lineage-in-the-uk-defined-by-a-novel-set-of-spike-mutations/563</a></p>
+
+                <p class="padded-citation" id="ref5">[5] Davies, N. G., Abbott, S., Barnard, R. C., Jarvis, C. I., Kucharski, A. J., Munday, J. D., Pearson, C., Russell, T. W., Tully, D. C., Washburne, A. D., Wenseleers, T., Gimma, A., Waites, W., Wong, K., van Zandvoort, K., Silverman, J. D., CMMID COVID-19 Working Group, COVID-19 Genomics UK (COG-UK) Consortium, Diaz-Ordaz, K., Keogh, R., … Edmunds, W. J. (2021). <i>Estimated transmissibility and impact of SARS-CoV-2 lineage B.1.1.7 in England.</i> Science (New York, N.Y.), 372(6538), eabg3055. <a href="https://doi.org/10.1126/science.abg3055" target="_blank">https://doi.org/10.1126/science.abg3055</a></p>
+
+                <p class="padded-citation" id="ref6">[6] Volz, E., Mishra, S., Chand, M., Barrett, J., Johnson, R., Geidelberg, L., Hinsley, W. R., Laydon, D. J., Dabrera, G., O'Toole, A., Amato, R., Ragonnet-Cronin M., Harrison, I., Jackson, B., Ariani, C. V., Boyd, O., Loman, N. J., McCrone, J. T., … Ferguson, N. M. (2021). <i>Assessing transmissibility of SARS-CoV-2 lineage B.1.1.7 in England.</i> Nature 593, 266–269. <a href="https://doi.org/10.1038/s41586-021-03470-x" target="_blank">https://doi.org/10.1038/s41586-021-03470-x</a></p>
+
+                <p class="padded-citation" id="ref7">[7] Wise, J. (2020, December 16). <i>Covid-19: New coronavirus variant is identified in UK.</i> BMJ. <a href="https://www.bmj.com/content/371/bmj.m4857" target="_blank">https://www.bmj.com/content/371/bmj.m4857</a></p>
+
+                <p class="padded-citation" id="ref8">[8] Challen, R., Brooks-Pollock, E., Read, M. J., Dyson, L., Tsaneva-Atanasova, K., & Danon, L. (2021). <i>Risk of mortality in patients infected with SARS-CoV-2 variant of concern 202012/1: matched cohort study.</i> BMJ 372, n579. <a href="https://doi.org/10.1136/bmj.n579" target="_blank">https://doi.org/10.1136/bmj.n579</a></p>
+
+                <p class="padded-citation" id="ref9">[9] Graham, M. S., Sudre, C. H., May, A., Antonelli, M., Murray, B., Varsavsky, T., Kläser, K., Canas, L. S., Molteni, E., Modat, M., Drew, D. A., Nguyen, L. H., Polidori, L., Selvachandran, S., Hu, C., Capdevila, J., COVID-19 Genomics UK (COG-UK) Consortium, Hammers, A., Chan, A. T., … Ourselin, S. (2021). <i>Changes in symptomatology, reinfection, and transmissibility associated with the SARS-CoV-2 variant B.1.1.7: an ecological study.</i> The Lancet. Public Health, 6(5), e335–e345. <a href="https://doi.org/10.1016/S2468-2667(21)00055-4" target="_blank">https://doi.org/10.1016/S2468-2667(21)00055-4</a></p>
+
+                <p class="padded-citation" id="ref10">[10] <i>B.1.1.7</i>. (2022). Cov-lineages.org. Retrieved January 6, 2022 from: <a href="https://cov-lineages.org/global_report_B.1.1.7.html" target="_blank">https://cov-lineages.org/global_report_B.1.1.7.html</a></p>
+
+                <p class="padded-citation" id="ref11">[11] <i>B.1.1.7 Lineage Report.</i> (2022). Outbreak.info. Retrieved January 8, 2022 from: <a href="https://outbreak.info/situation-reports?pango=B.1.1.7" target="_blank">https://outbreak.info/situation-reports?pango=B.1.1.7</a></p>
+
+                <p class="padded-citation" id="ref12">[12] BBC News. (2020, December 28). Covid: South Africa passes one million infections as cases surge. <i>BBC News</i>. <a href="https://www.bbc.com/news/world-africa-55462863" target="_blank">https://www.bbc.com/news/world-africa-55462863</a></p>
+
+                <p class="padded-citation" id="ref13">[13] Tegally, H., Wilkinson, E., Giovanetti, M., Iranzadeh, A., Fonseca, V., Giandhari, J., Doolabh, D., Pillay, S., San, E. J., Msomi, N., Mlisana, K., von Gottberg, A., Walaza, S., Allam, M., Ismail, A., Mohale, T., Glass, A. J., Engelbrecht, S., Van Zyl, G., … de Oliveira, T. (2020). <i>Emergence and rapid spread of a new severe acute respiratory syndrome-related coronavirus 2 (SARS-CoV-2) lineage with multiple spike mutations in South Africa</i>. In bioRxiv. <a href="https://doi.org/10.1101/2020.12.21.20248640" target="_blank">https://doi.org/10.1101/2020.12.21.20248640</a></p>
+                
+                <p class="padded-citation" id="ref14">[14] Wroughton, L., & Bearak, M. (2020, December 18). South Africa's second coronavirus wave is fueled by a new strain, teen 'rage festivals'. <i>Washington Post (Washington, D.C.: 1974)</i>. <a href="https://www.washingtonpost.com/world/africa/south-africa-coronavirus-second-wave/2020/12/18/d4a51aec-3ff7-11eb-b58b-1623f6267960_story.html" target="_blank">https://www.washingtonpost.com/world/africa/south-africa-coronavirus-second-wave/2020/12/18/d4a51aec-3ff7-11eb-b58b-1623f6267960_story.html</a></p>
+
+                <p class="padded-citation" id="ref15">[15] New virus mutation raises vaccine questions. (2021, January 13). <i>France 24</i>. <a href="https://www.france24.com/en/live-news/20210113-new-virus-mutation-raises-vaccine-questions" target="_blank">https://www.france24.com/en/live-news/20210113-new-virus-mutation-raises-vaccine-questions</a></p>
+
+                <p class="padded-citation" id="ref16">[16] Faria, N. R., Claro, I. M., Candido, D., Moyses Franco, L. A., Andrade, P. S., Coletti, T. M., Silva, C. A. M., Sales, F. C., Manuli, E. R., Aguiar, R. S., Gaburo, N., Camilo, C. C., Fraiji, N. A., Esashika Crispim, M. A., Carvalho, M. S. S., Rambaut, A., Loman, N., Pybus, O. G., Sabino, E. C., & CADDE Genomic Network. (2021, January 13). <i>Genomic characterisation of an emergent SARS-CoV-2 lineage in Manaus: preliminary findings.</i> Virological 586. <a href="https://virological.org/t/genomic-characterisation-of-an-emergent-sars-cov-2-lineage-in-manaus-preliminary-findings/586" target="_blank">https://virological.org/t/genomic-characterisation-of-an-emergent-sars-cov-2-lineage-in-manaus-preliminary-findings/586</a></p>
+
+                <p class="padded-citation" id="ref17">[17] Corum, J., & Zimmer, C. (2021, February 9). Tracking Omicron and other Coronavirus variants. <i>The New York Times</i>. <a href="https://www.nytimes.com/interactive/2021/health/coronavirus-variant-tracker.html" target="_blank">https://www.nytimes.com/interactive/2021/health/coronavirus-variant-tracker.html</a></p>
+
+                <p class="padded-citation" id="ref18">[18] SARS-CoV-2 Gamma variant. (2021, December 29). In <i>Wikipedia</i>. <a href="https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Gamma_variant&oldid=1062544939" target="_blank">https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Gamma_variant&oldid=1062544939</a></p>
+
+                <p class="padded-citation" id="ref19">[19] Le Page, M. (2021, November 9). Delta covid-19 variant (B.1.617). <i>NewScientist</i>. <a href="https://www.newscientist.com/definition/indian-covid-19-variant-b-1-617/" target="_blank">https://www.newscientist.com/definition/indian-covid-19-variant-b-1-617/</a></p>
+
+                <p class="padded-citation" id="ref20">[20] Lewis, T. (2021, June 29). <i>How dangerous is the delta variant, and will it cause a COVID surge in the U.S.?</i>. Scientific American. <a href="https://www.scientificamerican.com/article/how-dangerous-is-the-delta-variant-and-will-it-cause-a-covid-surge-in-the-u-s/" target="_blank">https://www.scientificamerican.com/article/how-dangerous-is-the-delta-variant-and-will-it-cause-a-covid-surge-in-the-u-s/</a></p>
+
+                <p class="padded-citation" id="ref21">[21] Li, B., Deng, A., Li, K., Hu, Y., Li, Z., Xiong, Q., Liu, Z., Guo, Q., Zou, L., Zhang, H., Zhang, M., Ouyang, F., Su, J., Su, W., Xu, J., Lin, H., Sun, J., Peng, J., Jiang, H., … Lu, J. (2021). <i>Viral infection and transmission in a large, well-traced outbreak caused by the SARS-CoV-2 Delta variant.</i> In bioRxiv. <a href="https://doi.org/10.1101/2021.07.07.21260122" target="_blank">https://doi.org/10.1101/2021.07.07.21260122</a></p>
+
+                <p class="padded-citation" id="ref22">[22] Ong, S. W. X., Chiew, C. J., Ang, L. W., Mak, T.-M., Cui, L., Toh, M. P. H. S., Lim, Y. D., Lee, P. H., Lee, T. H., Chia, P. Y., Maurer-Stroh, S., Lin, R. T. P., Leo, Y.-S., Lee, V. J., Lye, D. C., & Young, B. E. (2021). <i>Clinical and virological features of SARS-CoV-2 variants of concern: A retrospective cohort study comparing B.1.1.7 (alpha), B.1.315 (beta), and B.1.617.2 (delta)</i>. SSRN Electronic Journal. <a href="https://doi.org/10.2139/ssrn.3861566" target="_blank">https://doi.org/10.2139/ssrn.3861566</a></p>
+
+                <p class="padded-citation" id="ref23">[23] World Health Organization. (2021, August 24). <i>Weekly epidemiological update on COVID-19 - 24 August 2021</i>. <a href="https://www.who.int/publications/m/item/weekly-epidemiological-update-on-covid-19---24-august-2021" target="_blank">https://www.who.int/publications/m/item/weekly-epidemiological-update-on-covid-19---24-august-2021</a></p>
+
+                <p class="padded-citation" id="ref24">[24] SARS-CoV-2 Delta variant. (2021, December 28). In <i>Wikipedia</i>. <a href="https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Delta_variant&oldid=1062357009" target="_blank">https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Delta_variant&oldid=1062357009</a></p>
+
+                <p class="padded-citation" id="ref25">[25] World Health Organization. (2021, November 26). <i>Classification of Omicron (B.1.1.529): SARS-CoV-2 Variant of Concern</i>. <a href="https://www.who.int/news/item/26-11-2021-classification-of-omicron-(b.1.1.529)-sars-cov-2-variant-of-concern" target="_blank">https://www.who.int/news/item/26-11-2021-classification-of-omicron-(b.1.1.529)-sars-cov-2-variant-of-concern</a></p>
+
+                <p class="padded-citation" id="ref26">[26] World Health Organization. (2021, November 28). <i>Update on Omicron</i>. <a href="https://www.who.int/news/item/28-11-2021-update-on-omicron" target="_blank">https://www.who.int/news/item/28-11-2021-update-on-omicron</a></p>
+
+                <p class="padded-citation" id="ref27">[27] <i>Report 50 - Hospitalisation risk for Omicron cases in England.</i> (n.d.). Imperial College London. <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-50-severity-omicron/" target="_blank">https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-50-severity-omicron/</a></p>
+
+                <p class="padded-citation" id="ref28">[28] World Health Organization. (2021, June 15). <i>COVID-19 Weekly Epidemiological Update.</i> <a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20210615_weekly_epi_update_44.pdf?sfvrsn=d45d71e2_5" target="_blank">https://www.who.int/docs/default-source/coronaviruse/situation-reports/20210615_weekly_epi_update_44.pdf?sfvrsn=d45d71e2_5</a></p>
+
+                <p class="padded-citation" id="ref29">[29] SARS-CoV-2 Lambda variant. (2021, December 11). In <i>Wikipedia</i>. <a href="https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Lambda_variant&oldid=1059810339" target="_blank">https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Lambda_variant&oldid=1059810339</a></p>
+
+                <p class="padded-citation" id="ref30">[30] SARS-CoV-2 Mu variant. (2021, December 30). In <i>Wikipedia</i>. <a href="https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Mu_variant&oldid=1062774518" target="_blank">https://en.wikipedia.org/w/index.php?title=SARS-CoV-2_Mu_variant&oldid=1062774518</a></p>
+            </details>
+
+
+            <details class="variants references" id="multimedia-ref">
+                <summary><h2>Multimedia References:</h2></summary>
+
+                <p>Altmann, G. (2020, July 13). [Untitled image of a blue coronavirus]. Pixabay. <a href="https://pixabay.com/illustrations/corona-coronavirus-virus-covid-19-5401250/" target="_blank">https://pixabay.com/illustrations/corona-coronavirus-virus-covid-19-5401250/</a></p>
+
+                <p>Altmann G. (2021, August 21). [Untitled image of a red coronavirus]. Pixabay. <a href="https://pixabay.com/illustrations/coronavirus-virus-pandemic-crisis-6557675/" target="_blank">https://pixabay.com/illustrations/coronavirus-virus-pandemic-crisis-6557675/</a></p>
+          
+                <p>Altmann, G. (2020, March 16). [Untitled image of a red coronavirus with a laboratory backdrop]. Pixabay. <a href="https://pixabay.com/illustrations/vaccine-chemist-outbreak-4932430/" target="_blank">https://pixabay.com/illustrations/vaccine-chemist-outbreak-4932430/</a></p>
+
+                <p>Altmann, G. (2020, May 16). [Untitled image of red coronaviruses]. Pixabay. <a href="https://pixabay.com/illustrations/corona-coronavirus-virus-blood-5174671/" target="_blank">https://pixabay.com/illustrations/corona-coronavirus-virus-blood-5174671/</a></p>
+
+                <p>Maffie, L. (2020, February 10). [Untitled image of a blue coronavirus used to depict the Lambda variant]. Pixabay. <a href="https://pixabay.com/illustrations/virus-viruses-coronavirus-4835301/" target="_blank">https://pixabay.com/illustrations/virus-viruses-coronavirus-4835301/</a></p>
+
+                <p>Roberts, D. (2021, December 23). [Untitled image of a red coronavirus used to depict the Mu variant]. Pixabay. <a href="https://pixabay.com/photos/covid-19-coronavirus-infection-6882296/" target="_blank">https://pixabay.com/photos/covid-19-coronavirus-infection-6882296/</a></p>
+
+                <p>[Untitled image of a red coronavirus used to depict the Beta variant]. (2020, March 24). Pixabay. <a href="https://pixabay.com/photos/covid-19-coronavirus-virus-corona-4961257/" target="_blank">https://pixabay.com/photos/covid-19-coronavirus-virus-corona-4961257/</a></p>
+
+                <p>[Untitled illustration of a purple coronavirus]. (2020, March 16). Pixabay. <a href="https://pixabay.com/illustrations/virus-covid-science-covid19-4937553/" target="_blank">https://pixabay.com/illustrations/virus-covid-science-covid19-4937553/</a></p>
+            </details>
         </main>
 
         <footer>
@@ -99,4 +453,14 @@
             </div>
         </footer>
     </body>
+
+    <script>
+        function closeModal(modalValue) {
+            document.getElementById("modal-" + modalValue).style.display = "none";
+        }
+
+        function openModal(modalValue) {
+            document.getElementById('modal-' + modalValue).style.display = 'block';
+        }
+    </script>
 </html>

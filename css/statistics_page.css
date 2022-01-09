@@ -3,7 +3,6 @@ main {
 }
 
 main section:not(.references) {
-    padding-left: 20px;
     display: flex;
     justify-content: flex-end;
     border: 2px solid black;
@@ -56,7 +55,7 @@ details:not(details[open]) > summary:hover {
     -webkit-box-shadow: 15px 0 0 -2px #AD4945 inset;
     -moz-box-shadow: 15px 0 0 -2px #AD4945 inset;
     box-shadow: 15px 0 0 -2px #AD4945 inset;
-    text-indent: 13px;
+    padding-left: 50px;
     cursor: pointer;
 }
 
@@ -64,11 +63,8 @@ details[open] > summary {
     -webkit-box-shadow: 15px 0 0 -2px #AD4945 inset;
     -moz-box-shadow: 15px 0 0 -2px #AD4945 inset;
     box-shadow: 15px 0 0 -2px #AD4945 inset;
-    text-indent: 13px;
-}
-
-details[open] > summary:hover {
     cursor: pointer;
+    padding-left: 50px;
 }
 
 p:not(footer p) {
@@ -77,8 +73,8 @@ p:not(footer p) {
 }
 
 #stats-hero-image {
-    background-image: url("https://cdn.corporatefinanceinstitute.com/assets/Statistics-1-1024x711.jpeg");
-    height: 120px;
+    background-image: url("../images/Covid19-stats-page-hero.jpg");
+    height: 150px;
     background-size: cover;
 }
 
@@ -129,7 +125,9 @@ p:not(footer p) {
 
 .graph-description {
     border-right: 2px solid black;
+    background-color: #FFF4F4;
     width: 30%;
+    padding: 0 10px;
 }
 
 .graph-description img {
@@ -160,10 +158,6 @@ p:not(footer p) {
 
 .references a:hover {
     text-decoration: none;
-}
-
-.references p {
-    margin: 18px;
 }
 
 @media screen and (max-width: 700px) {

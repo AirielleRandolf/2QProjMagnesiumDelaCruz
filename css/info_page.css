@@ -18,7 +18,7 @@ p:not(footer p):not(.references p) {
 
 #info-page-hero {
     background-image: url("../images/Covid19-info-page-hero.jpg");
-    height: 200px;
+    height: 150px;
 }
 
 .addi-nav {
@@ -150,15 +150,6 @@ ul li {
     overflow-wrap: break-word;
 }
 
-.padded-citation::before {
-    display: block; 
-    content: " "; 
-    margin-top: -300px; 
-    height: 300px; 
-    visibility: hidden; 
-    pointer-events: none;
-}
-
 .info::after {
     content: "";
     clear: both;
@@ -185,7 +176,6 @@ th, td {
 }
 
 .references p {
-    font-size: 18px;
     font-family: Calibri, sans-serif;
 }
 
@@ -217,7 +207,21 @@ tr:nth-child(even) {
         padding: 35px;
     }
 
+    .info-collapsible {
+        font-size: 1em;
+    }
+
     #info-page-hero {
         display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content p, .content ul, figcaption, .home-main p {
+        font-size: 12px !important;
+    }
+
+    .content {
+        margin: 0;
     }
 }
