@@ -1,5 +1,13 @@
 # 2QProjMagnesiumDelaCruz
 
+v1.4 (09/01/2021):<br>
+-Added variants page<br>
+-Added myths page<br>
+-Changed the hero image (topmost image) of the statistics page
+
+<br><br><br><br>
+
+
 v1.3 (28/12/2021):<br>
 -Added statistics page
 
