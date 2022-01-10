@@ -1,0 +1,72 @@
+h1, h2, h3 {
+    font-family: 'Varela';
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+main p {
+    font-family: Calibri, sans-serif;
+    font-size: 1.1em;
+    margin: 25px 0;
+}
+
+figcaption a {
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+
+figcaption a:hover {
+    text-decoration: underline;
+}
+
+.images {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+#effects-header {
+    margin: 0 auto;
+    margin-top: -30px;
+    border-radius: 30px;
+    width: 70%;
+    background-color: white;
+    padding: 30px 50px 0 50px;
+}
+
+#effects-header p {
+    margin: 0;
+    font-family: 'Nunito';
+    text-align: center;
+}
+
+#effects-header h1 {
+    margin: 0;
+    font-size: 45px;
+    font-size: calc(32px + 1.5vw);
+    text-align: center;
+}
+
+#effects-hero-image {
+    background-image: url("../images/Slums-effects-page-hero.jpg");
+}
+
+.references {
+    margin: 150px 20px;
+}
+
+@media screen and (max-width: 450px) {
+    main {
+        width: 80%;
+    }
+
+    .images {
+        width: 100%;
+    }
+}

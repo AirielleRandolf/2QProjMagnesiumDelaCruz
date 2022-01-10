@@ -58,7 +58,6 @@ li > p {
 
 #variants-hero-image {
     background-image: url("../images/Covid19-variant-page-hero.jpg");
-    height: 150px;
 }
 
 #variants-header {
@@ -259,3 +258,52 @@ li > p {
 #info-lambda-img { background-position: 10%;} 
 .mu-img { background-image: url("../images/mu-img.jpg"); }
 #info-mu-img { background-position: 40%; }
+
+
+@media screen and (max-width: 700px) {
+    main p, main ol li {
+        margin: 0 30px;
+    }
+
+    .variants-buttons {
+        grid-template-columns: 50% 50% 50%;
+        column-gap: 20px;
+    }
+
+    #two-col {
+        grid-template-columns: 50% 50%;
+        column-gap: 20px;
+    }
+
+    .info {
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main p {
+        margin: 0 10px;
+    }
+
+    main ol li {
+        margin: 0;
+    }
+
+    .grid-wrapper {
+        padding: 5px;
+    }
+
+    .variants-buttons {
+        column-gap: 0;
+        row-gap: 0;
+        font-size: 0.7em;
+    }
+
+    .modal-box {
+        width: 100%;
+    }
+
+    .close-button {
+        right: 20px;
+    }
+}

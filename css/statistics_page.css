@@ -51,7 +51,7 @@ main details[open] h1::after {
     float: right;
 }
 
-details:not(details[open]) > summary:hover {
+details > summary:hover {
     -webkit-box-shadow: 15px 0 0 -2px #AD4945 inset;
     -moz-box-shadow: 15px 0 0 -2px #AD4945 inset;
     box-shadow: 15px 0 0 -2px #AD4945 inset;
@@ -60,11 +60,7 @@ details:not(details[open]) > summary:hover {
 }
 
 details[open] > summary {
-    -webkit-box-shadow: 15px 0 0 -2px #AD4945 inset;
-    -moz-box-shadow: 15px 0 0 -2px #AD4945 inset;
-    box-shadow: 15px 0 0 -2px #AD4945 inset;
     cursor: pointer;
-    padding-left: 50px;
 }
 
 p:not(footer p) {
@@ -74,7 +70,6 @@ p:not(footer p) {
 
 #stats-hero-image {
     background-image: url("../images/Covid19-stats-page-hero.jpg");
-    height: 150px;
     background-size: cover;
 }
 
@@ -181,11 +176,29 @@ p:not(footer p) {
 }
 
 @media screen and (max-width: 450px) {
+    details > summary {
+        padding-left: 20px;
+    }
+
+    details > summary:hover {
+        padding-left: 40px;
+    }
+
+    #stats-header {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
     .stats-card p {
         font-size: 14px;
     }
     
     .stats-card span {
         font-size: 1.3em;
+    }
+
+    summary > h1 {
+        font-size: 1.5em;
     }
 }

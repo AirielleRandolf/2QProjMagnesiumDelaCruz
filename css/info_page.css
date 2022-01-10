@@ -18,7 +18,6 @@ p:not(footer p):not(.references p) {
 
 #info-page-hero {
     background-image: url("../images/Covid19-info-page-hero.jpg");
-    height: 150px;
 }
 
 .addi-nav {
@@ -204,15 +203,12 @@ tr:nth-child(even) {
 @media screen and (max-width: 700px) {
     main {
         margin: 0;
+        margin-top: -30px;
         padding: 35px;
     }
 
     .info-collapsible {
         font-size: 1em;
-    }
-
-    #info-page-hero {
-        display: none;
     }
 }
 

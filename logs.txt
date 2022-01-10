@@ -1,3 +1,13 @@
+v1.5 (10/01/2021):
+-Added "About Me" page found in the footer
+-Added Effects page
+-Overhauled the whole site's design when viewed on phones and small devices
+-Changed social media links to image sprites from premade FontAwesome icons.
+-Added a few pink hues around the site
+
+
+
+
 v1.4 (09/01/2021):
 -Added variants page
 -Added myths page

@@ -3,7 +3,7 @@ h1, h2, h3 {
 }
 
 h2 {
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 main {
@@ -18,6 +18,23 @@ main p {
 
 main h1::first-letter {
     font-size: 1.3em;
+}
+
+figcaption a {
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+
+figcaption a:hover {
+    text-decoration: underline;
+}
+
+.images {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
 }
 
 .red {
@@ -68,7 +85,6 @@ main h1::first-letter {
 }
 
 #myths-hero-image {
-    height: 150px;
     background-image: url("https://cdn.pixabay.com/photo/2016/11/30/12/16/question-mark-1872665_960_720.jpg");
 }
 
@@ -98,4 +114,36 @@ main h1::first-letter {
 
 #arrow2 {
     opacity: 0;
+}
+
+#img2 {
+    margin-top: 120px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .selectors {
+        width: 25%;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    #myths-header {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #myths-header p {
+        padding-left: 0;
+    }
+
+    .selectors {
+        display: none;
+    }
+
+    .images {
+        width: 100%;
+    }
 }
