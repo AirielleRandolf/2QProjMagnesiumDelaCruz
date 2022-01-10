@@ -264,6 +264,7 @@ button:hover {
 
 #header-image1 {
     background-image: url("../images/home-banner.jpg");
+    height: 400px;
 }
 
 .main-navigation {
@@ -554,6 +555,7 @@ FOOTER
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    height: 400px;
 }
 
 footer {
@@ -730,7 +732,6 @@ hr {
 */
 @media screen and (max-width: 700px) {
     .top-nav-link {font-size: 12px; }
-    .hero-image { height: 200px; }
 
     .left-text-align > div {
         margin-right: 100px; /* Fallback */
@@ -784,7 +785,7 @@ hr {
         display: none;
     }
 
-    .hero-image {
+    .hero-image:not(.home-main .hero-image) {
         height: 100px;
     }
 
