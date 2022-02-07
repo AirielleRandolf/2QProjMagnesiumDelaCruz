@@ -1,11 +1,10 @@
 # 2QProjMagnesiumDelaCruz
 
 v1.5 (10/01/2021):<br>
--Added "About Me" page found in the footer<br>
 -Added Effects page<br>
 -Overhauled the whole site's design when viewed on phones and small devices<br>
 -Changed social media links from premade FontAwesome icons to image sprites<br>
--Added a few pink hues around the site
+-Enhanced the site's aesthetics
 
 <br><br><br><br>
 
